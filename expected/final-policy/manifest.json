@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "policy_sha256": "ef2df6ebe7df3b712bd7540905d43a89a667f8371ce434acb009b5d930251aa7",
+  "cohorts": {
+    "balanced": 1800,
+    "strata": 1603,
+    "stratum_population": 70233
+  },
+  "full_counts_included": false,
+  "files": {
+    "archive-checks.json": "e2871999ef45d72103c2b3321cd2fa40b9eb1901e897f47e8a6cc629866099ce",
+    "archive-summary.csv": "21816125a05d822dd111e05ee004a0c8c796ff13024a60743106d55e3829858d",
+    "execution-checks.json": "f0e20f16097895bf46c2f2bd9a656056319272d633d50f53e618cbe73b95091b",
+    "integer-comparison.csv": "880f7a4741b36fb13345a43e7c6a73c7bd5fdc8e9ea0036d78fa6b9018e5cd9f",
+    "latency-summary.csv": "0496d69b91622710b25894183ecc73a8e63deb5b244600dee8f21b0ef2ce7138",
+    "pair-mechanism.json": "d1ca48f42c82a0f2e7971ef8e2a1c463c6720c04487b7e10688241dbbe99738a",
+    "population.csv": "bf2d7be07c9f4322ab7f29dbf33bb47913bfe29b83e715b6a20c09f4abfce66e",
+    "query-selection.csv": "51ab4797fc804de66d5821cb5795f48c584fa18600580df8a852be11006972a5",
+    "stratified-timings.csv": "93cefd7a73f786a5d9fb4ee7f768f1877c5d45d753ec65ea24e57e757193549d"
+  },
+  "audit_files": {
+    "audit-statement.json": "8d7d19e0065ce5c62b34c8080c2919f5993828573fc86d4c5f57bffeb9443f4c",
+    "certificate.json": "d6e70281d8977ffc07c7559e79e56e716b4da7542109700a23af9b1146853ac4",
+    "checkpoints.csv": "a3f2ce1e6cc4b23b726e3c42570ec1275788336db7a8e9abf49aff782bb08684",
+    "count-metadata.json": "62434ab52529750abcdb9ba4b3e2f35819175d7db58005ffedc588fa8e69db17",
+    "request.json": "31a2b72e41c2ab9fe03fe7ab88974a8439421a1935f112e3b0736b2522c8605f"
+  },
+  "audit_checker_sha256": "0903c92914f347c50e906d8d178a0c4b3c61fbb7a89681ee19372972fc395b47"
+}

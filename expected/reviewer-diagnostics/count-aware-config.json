@@ -1,0 +1,17 @@
+{
+  "seed": 20261024,
+  "source": "Primary count-only query pack",
+  "exclude": [
+    "scania"
+  ],
+  "exclusion_reason": "Scania histogram mass can be fractional and has no validated iid observation-count interpretation",
+  "conditions": "all retained split totals available to every method: six regular known, ALPI and WMCS unknown",
+  "effect_tolerances": [
+    "0",
+    "1/10"
+  ],
+  "alpha": "1/20",
+  "threshold": "epsilon_k = effect + sqrt(log(2*K*(2**M-2)/alpha)/(2*nL_k)) + sqrt(log(2*K*(2**M-2)/alpha)/(2*nR_k)); known totals use actual counts, unknown use core lower counts",
+  "round_up_denominator": 1000000,
+  "scope": "null guarantee assumes independent categorical observations (or uniform permutation); real sensor results are a threshold sensitivity and do not verify the iid assumption"
+}

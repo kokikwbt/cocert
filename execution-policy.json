@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "method": "CoCert",
+  "pair_scales": 5,
+  "uses_answer_labels": false,
+  "unknown_total": {
+    "negative_candidates": ["B/2", "0", "B/4", "3B/4", "B"],
+    "positive_candidates": "single midpoint tangent, sharp single-scale bounds, then paired midpoint tangents",
+    "pair_gate": "all common-allocation and single-scale checks remain unresolved",
+    "candidate_scales": "descending numerical gamma; ties retain input scale index",
+    "pair_order": "lexicographic order of rank positions (0,1), (0,2), ..., (3,4)",
+    "maximum_pairs": 10,
+    "pair_proposal_tolerance": 1e-8,
+    "stop_rule": "first positive numerical pair proposes a rational certificate; return only after exact checking",
+    "failed_recovery": "common certificate refinement through sparse SOCP; undecided if no exact certificate is recovered",
+    "fallback": "scaled sparse SOCP with exact rational certificate recovery and checking"
+  },
+  "known_total": {
+    "pair_screen": false,
+    "screen": "exact single-scale bounds, their common allocations, proportional fixed-mass allocation",
+    "fallback": "fixed-total LP with exact rational certificate recovery and checking"
+  },
+  "ablation": {"pair_scales": 0},
+  "facets": "optional solver-component diagnostic; outside the default execution path"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "trials": 4119,
+  "timed_inputs": 1373,
+  "raw_timings_sha256": "318c442c70d2b16e69e2713e0626a4a46a7e517f7ebe4275777daa56a2da20a9",
+  "manifest_sha256": "5189a00729380baa0bdc73ee7a8bedd68d6dcee0da9972f89ca6586730d15fea",
+  "summary_sha256": "a7dc8a44eb533d321d477a2eda56d47c0790925f7299c17592ddb43956361c2a",
+  "script_sha256": "f1a3c0cb8edbe3e5cf2321260ff8c5e82de4e4c7df4c8ea587fc7da052e7b7d4"
+}

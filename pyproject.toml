@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cocert"
+version = "0.1.0"
+description = "Verified multiscale change queries over cumulative histograms"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY.md"]
+authors = [{name = "Koki Kawabata", email = "koki@sanken.osaka-u.ac.jp"}]
+requires-python = ">=3.11"
+dependencies = ["numpy==2.4.6", "scipy==1.17.1", "clarabel==0.11.1"]
+
+[project.urls]
+Repository = "https://github.com/kokikwbt/cocert"
+Issues = "https://github.com/kokikwbt/cocert/issues"
+
+[project.optional-dependencies]
+archive = ["polars==2.0.0"]
+symbolic = ["z3-solver==5.3.1.0"]
+test = ["pytest==9.1.1"]
+all = ["polars==2.0.0", "z3-solver==5.3.1.0"]
+
+[project.scripts]
+cocert = "cocert.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

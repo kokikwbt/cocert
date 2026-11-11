@@ -1,0 +1,22 @@
+{
+  "seed": 20261024,
+  "source": "Primary native WMCS window geometries",
+  "dataset": "wmcs",
+  "maximum_pooled_count": 52,
+  "template_limit": 64,
+  "selection": "input-only SHA order stratified by unit and largest pooled size 1..16,17..32,33..52",
+  "repetitions": 128,
+  "count_multipliers": [
+    1,
+    8,
+    64
+  ],
+  "nulls": [
+    "iid",
+    "conditional_permutation"
+  ],
+  "epsilon": "1/10",
+  "alpha": "1/20",
+  "round_threshold_up_denominator": 1000000,
+  "query_level_control": true
+}

@@ -1,0 +1,21 @@
+{
+  "seed": 20261024,
+  "epsilon": [
+    "1/100",
+    "1/10"
+  ],
+  "repetitions": 3,
+  "methods": [
+    "separate",
+    "simple_two_sided",
+    "no_pair"
+  ],
+  "max_queries_per_dataset_class": 64,
+  "classes": [
+    "separate_positive",
+    "shared_only_positive",
+    "common_negative"
+  ],
+  "selection": "seeded SHA256 within each retained-answer class; all nonempty classes, no fine labels",
+  "native_threads": 1
+}

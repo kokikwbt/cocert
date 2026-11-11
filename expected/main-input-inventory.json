@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "queries": 70233,
+  "datasets": {
+    "alpi": 5328,
+    "care": 4731,
+    "hydsys": 3072,
+    "metro": 3717,
+    "oyicd": 3072,
+    "ppd": 1745,
+    "scania": 12118,
+    "wmcs": 34564,
+    "xjtu_sy": 1886
+  },
+  "file": "main-unknown.jsonl.gz",
+  "sha256": "1631374e48ab6677d47d18c3ce75e98fcc322336e9b2d5a191dc4e0f04e839d3",
+  "note": "Inventory and hash of the local full pack; pack is not bundled in the upload"
+}

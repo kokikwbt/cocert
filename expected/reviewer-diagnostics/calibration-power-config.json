@@ -1,0 +1,33 @@
+{
+  "seed": 20261025,
+  "alpha": "1/20",
+  "effects_real": [
+    "0",
+    "1/10"
+  ],
+  "effects_power": [
+    "0",
+    "1/10",
+    "1/5",
+    "2/5",
+    "4/5"
+  ],
+  "effect_tolerance": "1/10",
+  "count_multipliers": [
+    1,
+    8,
+    64,
+    512
+  ],
+  "block_sizes": [
+    1,
+    16
+  ],
+  "templates": 8,
+  "repetitions": 32,
+  "round_up_denominator": 1000000,
+  "template_selection": "seeded input-only hash order across native WMCS units",
+  "input_source": "Primary integral-count query pack and stationary-control window templates",
+  "real_data_interpretation": "threshold sensitivity; independence not established",
+  "power_interpretation": "controlled independent-block categorical model on native window geometry"
+}

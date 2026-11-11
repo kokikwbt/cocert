@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "real_answers": 116230,
+  "power_draws": 10240,
+  "unique_proofs": 77965,
+  "returned_proofs_checked": 77964,
+  "independent_threshold_checks": 683550,
+  "stdlib_only": true
+}

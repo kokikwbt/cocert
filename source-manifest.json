@@ -1,0 +1,221 @@
+{
+  "schema": 3,
+  "files": [
+    {
+      "file": "scripts/audit_integer.py",
+      "sha256": "1d45f50952027e7a897bbe2a9d06a6413bfcf64dd258ab266689eefe7d417dfb"
+    },
+    {
+      "file": "scripts/benchmark_policy.py",
+      "sha256": "11977c74becdee457d70a806f748be1039a867dcf1e361cc378679b690a2e61b"
+    },
+    {
+      "file": "scripts/construct_queries.py",
+      "sha256": "628a7e0568036bd5afab8a6c604553809a13a892fa6c769c3b91b99576d196bd"
+    },
+    {
+      "file": "scripts/integer_query.py",
+      "sha256": "f973844e3b2d336fc346c4540f748e81c877ad69c9b1a9b2d7d0f9781a66d2b2"
+    },
+    {
+      "file": "scripts/package_release.py",
+      "sha256": "26e645db75b61dbee51dbc36ae4873ec3f69a9f9a6b668b33be668f0b2512b81"
+    },
+    {
+      "file": "scripts/reproduce_table8.py",
+      "sha256": "2a94006271eb1a105649dd668967bbd811d1e528aff2e055741bd6e418438a6b"
+    },
+    {
+      "file": "scripts/verify_archive_example.py",
+      "sha256": "f97e80380dccf56b1b0aa60f7696810e22cf6782fc50dc3fd39e548cd489550e"
+    },
+    {
+      "file": "scripts/verify_audit_record.py",
+      "sha256": "0903c92914f347c50e906d8d178a0c4b3c61fbb7a89681ee19372972fc395b47"
+    },
+    {
+      "file": "scripts/verify_offline.py",
+      "sha256": "936de2163313b701f0161deff1bc89f9ec059f6f4c79419aa85e3ddb37c0cbf5"
+    },
+    {
+      "file": "src/cocert/__init__.py",
+      "sha256": "44ef1871c87bb7f8d4928e278b3dd11c9ee5ad17b0efbc21f1fe861918a046c2"
+    },
+    {
+      "file": "src/cocert/_certificate.py",
+      "sha256": "b2d3c0c0db5297fd991e2917acc6ae656a331016b874d3b5f004dfeee3870ea9"
+    },
+    {
+      "file": "src/cocert/_facets.py",
+      "sha256": "19e0de36545febf72c7214075141c841f775e7ed1230a4fc2855e1cb78e66c06"
+    },
+    {
+      "file": "src/cocert/_histogram.py",
+      "sha256": "396d246c1ce066f329db192dee3804cc34f66fb72fb19244e8f95dfb8ab9a88f"
+    },
+    {
+      "file": "src/cocert/_screen.py",
+      "sha256": "72944760822f346ed52802dd1537b23742fe672f9c5b6608a330503dfdf67fca"
+    },
+    {
+      "file": "src/cocert/_split.py",
+      "sha256": "5d4550a248e901d7ce759d38ce3ae3e68e64085c6c894d220a9c7165daadeaba"
+    },
+    {
+      "file": "src/cocert/_verify_known.py",
+      "sha256": "69336912699cd377647a7e2e4b41465e51f816d5b27e83baa06d327c14256bf9"
+    },
+    {
+      "file": "src/cocert/_verify_unknown.py",
+      "sha256": "5eadd36b7f0e34ebc0a66e01be45dc7afb50bb9c09d0b18da40e1c356ab96b82"
+    },
+    {
+      "file": "src/cocert/api.py",
+      "sha256": "35a663ed99a6a69a143cd299e3c8bb6ceee0c4ab3bffb92a7a3ff86c870fb8b9"
+    },
+    {
+      "file": "src/cocert/archive.py",
+      "sha256": "5b924f3975034877a92c4a1e45b34d7fae33c4c3b7854d3fb8bf5468cfa9b724"
+    },
+    {
+      "file": "src/cocert/backends/__init__.py",
+      "sha256": "c0a19ccb32873afcd374aebdee860a99d2a4dc21f2325d44580fbd0b911d2ec9"
+    },
+    {
+      "file": "src/cocert/backends/conic.py",
+      "sha256": "d21acade0194f49390bebbc5a5396a069217f7c4db64fc46ef20a18a593cd8a3"
+    },
+    {
+      "file": "src/cocert/backends/decision.py",
+      "sha256": "e8ffb7236065dfb19c8569dcb08e105986b6ac56658e8880d36e93f56eff58ed"
+    },
+    {
+      "file": "src/cocert/backends/fixed.py",
+      "sha256": "f24e866dac61ac2a318390178186fa8c17f1f36026731a00a25cd291a7e95c57"
+    },
+    {
+      "file": "src/cocert/backends/fixed_certificates.py",
+      "sha256": "7de16a73160811db5b58242e616b5b71104248d5232ada621a0d4292120353f6"
+    },
+    {
+      "file": "src/cocert/backends/full.py",
+      "sha256": "d905f74d44220a06b4170a7dc9698d129e0c0ae19584a40526aca02a10945dbe"
+    },
+    {
+      "file": "src/cocert/backends/simple.py",
+      "sha256": "6b5038f7fc0e53af173c8197e335a6af95bccd54d23e5fa89fcab5788c226cef"
+    },
+    {
+      "file": "src/cocert/baselines/__init__.py",
+      "sha256": "c0a19ccb32873afcd374aebdee860a99d2a4dc21f2325d44580fbd0b911d2ec9"
+    },
+    {
+      "file": "src/cocert/baselines/audb.py",
+      "sha256": "20eb492b5df1eeca2d34549439528252bb265b8de552e03c24fb5e3f37a8138e"
+    },
+    {
+      "file": "src/cocert/baselines/density.py",
+      "sha256": "93ec5caca1863947e6878d81a098091c6b8a0b2a0a55b80a2c7809ba427d99dd"
+    },
+    {
+      "file": "src/cocert/baselines/midpoint.py",
+      "sha256": "e50286c2594441b9b4b3f6283021c46eb2ed47012194376357537334d01042b9"
+    },
+    {
+      "file": "src/cocert/baselines/symbolic.py",
+      "sha256": "59608ad297d37e7284c9ad76b3c6491056a8ccbed823968e7317f6d377d2c1ee"
+    },
+    {
+      "file": "src/cocert/baselines/symbolic_isolation.py",
+      "sha256": "7c21c7848c41cd76d574e7560f5f3afceb4a965e3996ecf2fe303335e2c6c50c"
+    },
+    {
+      "file": "src/cocert/cli.py",
+      "sha256": "8ec1e96311c6c6d2f06d3126c29ca0055a0e46c0271178ee148851519e940390"
+    },
+    {
+      "file": "src/cocert/comparison.py",
+      "sha256": "851a3f60cb031c31463ebef5cf2f0e997649e7063f766c360a84d4f3bf5814e8"
+    },
+    {
+      "file": "src/cocert/configuration.py",
+      "sha256": "58f67180e523b77db9f19dc7f2b4ac6b741821df8f7b8c9a46838802e63801e2"
+    },
+    {
+      "file": "src/cocert/integer.py",
+      "sha256": "ace113faf7612cd36e591685a0d3d2cdd964b7666a0adb0b5127b0cf6a860835"
+    },
+    {
+      "file": "src/cocert/io.py",
+      "sha256": "db429b8cbd0c30cd1962af1a6f0e7ae821ad496f650eee61b1576ff698a37505"
+    },
+    {
+      "file": "src/cocert/paired_calibration.py",
+      "sha256": "c6c872ee323cc7954aa6ea65bd7d989431ba6459fa6e36443a3c2c0879c0b7ab"
+    },
+    {
+      "file": "src/cocert/queries.py",
+      "sha256": "31585cb71cdf024286bb69a3a55628e555954ac99218634b1370a4bc4f4f8fda"
+    },
+    {
+      "file": "src/cocert/runs.py",
+      "sha256": "58a5692ef6fb1b9e537b7e99e3db293a67bb5e89d035afffc9ab880c8ec78451"
+    },
+    {
+      "file": "src/cocert/verification.py",
+      "sha256": "672feb34de7f236bab4c64dd95d8f54a9c6c063a56870d8e7915df6570e778c6"
+    },
+    {
+      "file": "src/cocert/verify_integer.py",
+      "sha256": "03e710ee640830071d25f6c3dd56e3ee19d16cfdee69f3c93fe41e97559a8b82"
+    },
+    {
+      "file": "src/cocert/verify_window_thresholds.py",
+      "sha256": "20a5a25c8e38e73fa060e83b6a32732298f2cbc020a1818b496bb11c5557984b"
+    },
+    {
+      "file": "src/cocert/window_thresholds.py",
+      "sha256": "9d60139c001e42a43d217052a4d31cac265d0c1952f133e02e68642dadedccbd"
+    },
+    {
+      "file": "tests/test_audit_record.py",
+      "sha256": "27373a1b5b673d95ab66b8ef037f281a85d69d88a16e007d9857183fc88f9345"
+    },
+    {
+      "file": "tests/test_contracts.py",
+      "sha256": "f3c23f84be6ad532c5462ec586115625c646bbd626823b7f1db4514419556a75"
+    },
+    {
+      "file": "tests/test_integer_certificates.py",
+      "sha256": "bce2f2af4fc9c8f8578e5cbc63496a8e88434216eeebd33d59315335cb664ba1"
+    },
+    {
+      "file": "tests/test_optional_adapters.py",
+      "sha256": "b64068dca9d381ce79ea8df70627db44550583462294013eca99e9b28bd5bd76"
+    },
+    {
+      "file": "tests/test_packaging.py",
+      "sha256": "a51f3353096e4a3ff7741132fad56354173965bf0603bc7d6f2918c7b651fbf9"
+    },
+    {
+      "file": "tests/test_pair_screen.py",
+      "sha256": "3529973b7a065f87043f9d79422a069e925770d6f060f654c9db84b1fa82104f"
+    },
+    {
+      "file": "tests/test_paper_contracts.py",
+      "sha256": "ad3081ec78dc91432c0f0c89c9280b8787aea5948f82ad9df995a7856bf1179a"
+    },
+    {
+      "file": "tests/test_paper_features.py",
+      "sha256": "08d04dae6903e3c8a98f365cfbd5ae716db66b2ab9bec911638dab157e17c1f1"
+    },
+    {
+      "file": "tests/test_policy_benchmark.py",
+      "sha256": "c29a2568bee5abe1017072dbddd008e5159634e212926f7afb9cd41b6061fa79"
+    },
+    {
+      "file": "tests/test_table8_reproduction.py",
+      "sha256": "be118d772074e4465175106e02ecacbeba07118d63482ec1f030953418744ed6"
+    }
+  ]
+}

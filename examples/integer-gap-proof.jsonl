@@ -1,0 +1,1 @@
+{"query_id":0,"dataset":"constructed_integer_gap","A":[["5","4"],["5","6"]],"B":["1","1"],"C":[["4","5"],["6","5"]],"epsilon":"1/10","kind":"feasible","found":false,"stage":"solver","numerical_candidate_found":false,"alternative_witness":false,"allocation":["8189405543684813/18014398509481984","1228040718215463/2251799813685248"]}

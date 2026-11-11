@@ -1,0 +1,61 @@
+{
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "sources": {
+    "alpi": {
+      "name": "ALARM LOGS IN PACKAGING INDUSTRY",
+      "version": "1",
+      "provider": "https://data.mendeley.com/datasets/4nhx2x67cd/1"
+    },
+    "hydsys": {
+      "name": "Condition Monitoring of Hydraulic Systems",
+      "provider": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems"
+    },
+    "metro": {
+      "name": "MetroPT2: A Benchmark dataset for predictive maintenance",
+      "version": "V2",
+      "provider": "https://zenodo.org/records/7766691"
+    }
+  },
+  "purpose": "Small executable examples; not an unbiased evaluation cohort",
+  "records": [
+    {
+      "dataset": "alpi",
+      "query_id": 7270,
+      "unit": "14",
+      "feature": "alarm_type"
+    },
+    {
+      "dataset": "alpi",
+      "query_id": 444,
+      "unit": "1",
+      "feature": "alarm_type"
+    },
+    {
+      "dataset": "hydsys",
+      "query_id": 10961,
+      "unit": "1250",
+      "feature": "PS6"
+    },
+    {
+      "dataset": "hydsys",
+      "query_id": 8535,
+      "unit": "1567",
+      "feature": "EPS1"
+    },
+    {
+      "dataset": "hydsys",
+      "query_id": 10002,
+      "unit": "1702",
+      "feature": "PS6"
+    },
+    {
+      "dataset": "metro",
+      "query_id": 14964,
+      "unit": "MetroPT2",
+      "feature": "Oil_temperature"
+    }
+  ],
+  "sha256": "0a9f33821bed9004a628ff932e2d734fcec0d70cd6e93c4d93da1c5173607220",
+  "transformation": "Retained cumulative endpoints differenced into A/B/C; source record identifiers retained; no fine allocations in query inputs"
+}

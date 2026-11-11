@@ -1,0 +1,8 @@
+{
+  "split_total": "322",
+  "boundary_total": "908",
+  "source": "timestamp-derived supplied-count condition",
+  "before_us": 1657533600000000,
+  "cut_us": 1657533918948000,
+  "after_us": 1657534500000000
+}

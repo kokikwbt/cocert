@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "scope": "Current paper contracts, mathematical identities and fixed saved-input comparisons",
+  "source_manifest_sha256": "dc2530d6a76dc7b81844a034dcbd308d6db13aae9b49733bc1fc77225f3b4a81",
+  "mathematical_checks": {
+    "affine_identity_evaluations": 1728,
+    "tangent_bound_evaluations": 864,
+    "integer_exhaustive_decisions": 150,
+    "conic_and_facet_dimension_checks": true
+  },
+  "request_contracts": {
+    "known_total_proof_rejected_for_unknown_total": true,
+    "threshold_mismatch_rejected": true,
+    "optimized_python_rejected": true,
+    "observed_unsigned_counter_decreases_rejected": true,
+    "large_integer_endpoint_differences_preserved": true,
+    "calibration_requires_integer_observations": true,
+    "complete_threshold_on_rational_grid": true
+  },
+  "fixed_input_comparisons": {
+    "schema": 1,
+    "sampled_queries": 108,
+    "unknown_calls": 324,
+    "by_dataset": {
+      "alpi": 36,
+      "care": 36,
+      "hydsys": 36,
+      "metro": 36,
+      "oyicd": 36,
+      "ppd": 36,
+      "scania": 36,
+      "wmcs": 36,
+      "xjtu_sy": 36
+    },
+    "known_calls": 72,
+    "six_strategy_comparisons": 108,
+    "status_mismatches": 0,
+    "failed_proofs": 0,
+    "selection": "12 per dataset, SHA256 identifier order, seed 20261021",
+    "scope": "Packaging parity on fixed saved inputs; not a new full-paper rerun"
+  },
+  "calibration_vector_comparisons": {
+    "queries": 96,
+    "datasets": [
+      "alpi",
+      "care",
+      "hydsys",
+      "metro",
+      "oyicd",
+      "ppd",
+      "wmcs",
+      "xjtu_sy"
+    ],
+    "threshold_vector_comparisons": 480,
+    "mismatches": 0,
+    "policies": [
+      "subset-union",
+      "paired-sample"
+    ],
+    "effects": [
+      "0",
+      "1/10"
+    ],
+    "scope": "Fixed saved input cohort; identical supplied total conditions; no new full-data evaluation"
+  },
+  "manuscript_source_validation": "passed",
+  "content_pages": 12,
+  "reference_pages": 2
+}

@@ -1,0 +1,150 @@
+{
+  "schema": 1,
+  "purpose": "Documented Python components and their roles in the paper",
+  "components": [
+    {
+      "name": "Query interface",
+      "paper": "Sections 3 and 4",
+      "files": [
+        "src/cocert/__init__.py",
+        "src/cocert/api.py",
+        "src/cocert/queries.py",
+        "src/cocert/configuration.py"
+      ]
+    },
+    {
+      "name": "Algorithm 1 screening and exact single-window minima",
+      "paper": "Section 4.5",
+      "files": [
+        "src/cocert/_screen.py",
+        "src/cocert/_histogram.py",
+        "src/cocert/_split.py"
+      ]
+    },
+    {
+      "name": "Convex solvers and computational controls",
+      "paper": "Sections 4.2, 4.4, 5.3",
+      "files": [
+        "src/cocert/_facets.py",
+        "src/cocert/backends/__init__.py",
+        "src/cocert/backends/full.py",
+        "src/cocert/backends/decision.py",
+        "src/cocert/backends/fixed.py",
+        "src/cocert/backends/simple.py",
+        "src/cocert/backends/conic.py"
+      ]
+    },
+    {
+      "name": "Rational certificate recovery and independent checking",
+      "paper": "Section 4.3",
+      "files": [
+        "src/cocert/_certificate.py",
+        "src/cocert/verification.py",
+        "src/cocert/_verify_known.py",
+        "src/cocert/_verify_unknown.py",
+        "src/cocert/backends/fixed_certificates.py"
+      ]
+    },
+    {
+      "name": "Six-strategy coverage comparison",
+      "paper": "Section 5.1, Table 4",
+      "files": [
+        "src/cocert/comparison.py",
+        "src/cocert/baselines/__init__.py",
+        "src/cocert/baselines/audb.py",
+        "src/cocert/baselines/density.py"
+      ]
+    },
+    {
+      "name": "Symbolic feasibility comparison",
+      "paper": "Section 5.3",
+      "files": [
+        "src/cocert/baselines/symbolic.py",
+        "src/cocert/baselines/symbolic_isolation.py"
+      ]
+    },
+    {
+      "name": "Midpoint contrast",
+      "paper": "Section 6",
+      "files": [
+        "src/cocert/baselines/midpoint.py"
+      ]
+    },
+    {
+      "name": "Integer histories and exhaustive audit",
+      "paper": "Sections 4.6, 5.2",
+      "files": [
+        "src/cocert/integer.py",
+        "src/cocert/verify_integer.py",
+        "scripts/integer_query.py",
+        "scripts/audit_integer.py"
+      ]
+    },
+    {
+      "name": "Count-aware thresholds and supplied-block contract",
+      "paper": "Section 5.2, Table 5, Figure 4",
+      "files": [
+        "src/cocert/paired_calibration.py",
+        "src/cocert/window_thresholds.py",
+        "src/cocert/verify_window_thresholds.py"
+      ]
+    },
+    {
+      "name": "Retained archive adapter",
+      "paper": "Sections 4.6 and 5.3",
+      "files": [
+        "src/cocert/archive.py",
+        "scripts/construct_queries.py",
+        "scripts/verify_archive_example.py"
+      ]
+    },
+    {
+      "name": "Public commands, run records, and source packaging",
+      "paper": "Execution support for Sections 5 and 6",
+      "files": [
+        "src/cocert/cli.py",
+        "src/cocert/runs.py",
+        "src/cocert/io.py",
+        "scripts/verify_offline.py",
+        "scripts/package_release.py"
+      ]
+    },
+    {
+      "name": "Input/proof/packaging contract checks",
+      "paper": "Validation support for the implementation",
+      "files": [
+        "tests/test_contracts.py",
+        "tests/test_integer_certificates.py",
+        "tests/test_optional_adapters.py",
+        "tests/test_paper_features.py",
+        "tests/test_packaging.py",
+        "tests/test_paper_contracts.py",
+        "tests/test_pair_screen.py",
+        "tests/test_audit_record.py",
+        "tests/test_policy_benchmark.py",
+        "tests/test_table8_reproduction.py"
+      ]
+    },
+    {
+      "name": "Known-total audit record",
+      "paper": "Section 6, Table 9",
+      "files": [
+        "scripts/verify_audit_record.py"
+      ]
+    },
+    {
+      "name": "Fixed policy fresh-process benchmark",
+      "paper": "Section 5.3, Tables 6 and 8",
+      "files": [
+        "scripts/benchmark_policy.py"
+      ]
+    },
+    {
+      "name": "Table 8 saved-timing aggregation",
+      "paper": "Section 5.3, Table 8",
+      "files": [
+        "scripts/reproduce_table8.py"
+      ]
+    }
+  ]
+}

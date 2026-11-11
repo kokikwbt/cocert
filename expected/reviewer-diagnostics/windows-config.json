@@ -1,0 +1,16 @@
+{
+  "seed": 20261024,
+  "source": "Primary count-only query pack",
+  "epsilon": [
+    "1/100",
+    "1/10"
+  ],
+  "designs": [
+    "symmetric",
+    "symmetric_plus_first",
+    "full"
+  ],
+  "cohort": "all same 70233 primary queries; one symmetric scale is allowed; absent additions keep the identical design",
+  "asymmetric_order": "original protocol order",
+  "known_totals": false
+}
