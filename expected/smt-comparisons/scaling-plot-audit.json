@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "paired_cases": 140,
+  "measurements": 280,
+  "exact_input_sizes_matched": true,
+  "matches_adopted_aggregates": true,
+  "source_sha256": "d76e2858dbc530a99b7d48e80eb8198e7aef276c4f11a6cf3c99eccd5e4dbd54",
+  "input_sha256": {
+    "themes/certified-change/experiments/E094-smt-comparisons/outputs/smt-tail-20261115-v2/scaling-results.jsonl.gz": "d100ccc8c688f127dd9895cade6e68fa74a4df19369a6b14aaff997fa504bd0d",
+    "themes/certified-change/experiments/E094-smt-comparisons/outputs/smt-tail-20261115-v2/data/fixtures.json": "d110ac3516d0fc988ef6b06675acfe28b503d66f66953d86ffe024724953082e",
+    "themes/certified-change/experiments/E094-smt-comparisons/outputs/smt-tail-20261115-v2/measurements-audit.json": "d5421ce8c2b5f55a2eb32d01acfb0369af4c33f564587a0ce914060c2cf8f6e2"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "sampled_queries": 108,
+  "unknown_calls": 324,
+  "by_dataset": {
+    "alpi": 36,
+    "care": 36,
+    "hydsys": 36,
+    "metro": 36,
+    "oyicd": 36,
+    "ppd": 36,
+    "scania": 36,
+    "wmcs": 36,
+    "xjtu_sy": 36
+  },
+  "known_calls": 72,
+  "six_strategy_comparisons": 108,
+  "status_mismatches": 0,
+  "failed_proofs": 0,
+  "selection": "12 per dataset, SHA256 identifier order, seed 20261021",
+  "scope": "Packaging parity on fixed saved inputs; not a new full-paper rerun"
+}

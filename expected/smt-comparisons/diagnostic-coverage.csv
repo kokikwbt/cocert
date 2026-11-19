@@ -1,0 +1,10 @@
+family,scenario,setting,requests,smt_positive,smt_negative,smt_undecided,not_run,cocert_positive,separate_positive,reference_agreement,disagreement,reference_requests,separate_reference_requests
+pair_mechanism,ALPI,two_scale,118,16,54,48,0,31,,70,0,118,0
+pair_mechanism,CARE,two_scale,2,1,1,0,0,1,,2,0,2,0
+pair_mechanism,HydSys-PS6,two_scale,36,19,17,0,0,19,,36,0,36,0
+pair_mechanism,MetroPT2,two_scale,47,32,15,0,0,32,,47,0,47,0
+pair_mechanism,OYICD-FS,two_scale,73,15,58,0,0,15,,73,0,73,0
+pair_mechanism,OYICD-LE,two_scale,139,22,117,0,0,22,,139,0,139,0
+pair_mechanism,Scania,two_scale,180,37,103,40,0,50,,140,0,180,0
+pair_mechanism,WMCS,two_scale,227,35,192,0,0,35,,227,0,227,0
+pair_mechanism,XJTU-SY,two_scale,33,6,27,0,0,6,,33,0,33,0

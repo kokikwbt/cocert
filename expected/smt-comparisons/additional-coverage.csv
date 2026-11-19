@@ -1,0 +1,53 @@
+family,scenario,setting,requests,smt_positive,smt_negative,smt_undecided,not_run,cocert_positive,separate_positive,reference_agreement,disagreement,reference_requests,separate_reference_requests
+bin_sensitivity,HydSys-PS6,16:1/10,1536,297,1239,0,0,297,231,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,16:1/2,1536,0,1536,0,0,0,0,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,16:3/10,1536,8,1528,0,0,8,8,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,32:1/10,1536,433,1103,0,0,433,341,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,32:1/2,1536,0,1536,0,0,0,0,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,32:3/10,1536,13,1523,0,0,13,13,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,4:1/10,1536,33,1503,0,0,33,23,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,4:1/2,1536,0,1536,0,0,0,0,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,4:3/10,1536,0,1536,0,0,0,0,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,8:1/10,1536,192,1344,0,0,192,131,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,8:1/2,1536,0,1536,0,0,0,0,1536,0,1536,1536
+bin_sensitivity,HydSys-PS6,8:3/10,1536,1,1535,0,0,1,1,1536,0,1536,1536
+bin_sensitivity,OYICD-FS,16:1/10,1536,1374,162,0,0,1374,1175,1536,0,1536,1536
+bin_sensitivity,OYICD-FS,16:1/2,1536,558,978,0,0,558,549,1536,0,1536,1536
+bin_sensitivity,OYICD-FS,16:3/10,1536,951,585,0,0,951,945,1536,0,1536,1536
+bin_sensitivity,OYICD-FS,32:1/10,1536,1401,109,26,0,1421,1221,1510,0,1536,1536
+bin_sensitivity,OYICD-FS,32:1/2,1536,548,861,127,0,629,626,1409,0,1536,1536
+bin_sensitivity,OYICD-FS,32:3/10,1536,930,564,42,0,965,958,1494,0,1536,1536
+bin_sensitivity,OYICD-FS,4:1/10,1536,1255,281,0,0,1255,1102,1536,0,1536,1536
+bin_sensitivity,OYICD-FS,4:1/2,1536,314,1222,0,0,314,310,1536,0,1536,1536
+bin_sensitivity,OYICD-FS,4:3/10,1536,877,659,0,0,877,863,1536,0,1536,1536
+bin_sensitivity,OYICD-FS,8:1/10,1536,1337,199,0,0,1337,1149,1536,0,1536,1536
+bin_sensitivity,OYICD-FS,8:1/2,1536,446,1090,0,0,446,434,1536,0,1536,1536
+bin_sensitivity,OYICD-FS,8:3/10,1536,919,617,0,0,919,909,1536,0,1536,1536
+bin_sensitivity,OYICD-LE,16:1/10,1536,418,946,172,0,482,241,1364,0,1536,1536
+bin_sensitivity,OYICD-LE,16:1/2,1536,3,1533,0,0,3,3,1536,0,1536,1536
+bin_sensitivity,OYICD-LE,16:3/10,1536,10,1526,0,0,10,10,1536,0,1536,1536
+bin_sensitivity,OYICD-LE,32:1/10,1536,49,1,1486,0,,518,50,0,1534,1536
+bin_sensitivity,OYICD-LE,32:1/2,1536,3,1533,0,0,3,3,1536,0,1536,1536
+bin_sensitivity,OYICD-LE,32:3/10,1536,10,1431,95,0,10,10,1441,0,1536,1536
+bin_sensitivity,OYICD-LE,4:1/10,1536,85,1451,0,0,85,13,1536,0,1536,1536
+bin_sensitivity,OYICD-LE,4:1/2,1536,0,1536,0,0,0,0,1536,0,1536,1536
+bin_sensitivity,OYICD-LE,4:3/10,1536,2,1534,0,0,2,2,1536,0,1536,1536
+bin_sensitivity,OYICD-LE,8:1/10,1536,237,1299,0,0,237,127,1536,0,1536,1536
+bin_sensitivity,OYICD-LE,8:1/2,1536,0,1536,0,0,0,0,1536,0,1536,1536
+bin_sensitivity,OYICD-LE,8:3/10,1536,10,1526,0,0,10,10,1536,0,1536,1536
+figure1,MetroPT2,displayed_two_windows_known,1,1,0,0,0,1,,1,0,1,0
+figure1,MetroPT2,displayed_two_windows_unknown,1,0,1,0,0,,,0,0,0,0
+maintenance_audit,MetroPT2,Air leak:300:known,28,14,14,0,0,14,14,28,0,28,28
+maintenance_audit,MetroPT2,Air leak:300:unknown,28,14,14,0,0,14,14,28,0,28,28
+maintenance_audit,MetroPT2,Air leak:60:known,28,14,14,0,0,14,14,28,0,28,28
+maintenance_audit,MetroPT2,Air leak:60:unknown,28,14,14,0,0,14,14,28,0,28,28
+maintenance_audit,MetroPT2,Air leak:900:known,28,14,14,0,0,14,14,28,0,28,28
+maintenance_audit,MetroPT2,Air leak:900:unknown,28,14,14,0,0,14,14,28,0,28,28
+maintenance_audit,MetroPT2,Oil leak:300:known,28,21,7,0,0,21,21,28,0,28,28
+maintenance_audit,MetroPT2,Oil leak:300:unknown,28,21,7,0,0,21,21,28,0,28,28
+maintenance_audit,MetroPT2,Oil leak:60:known,28,21,7,0,0,21,21,28,0,28,28
+maintenance_audit,MetroPT2,Oil leak:60:unknown,28,21,7,0,0,21,21,28,0,28,28
+maintenance_audit,MetroPT2,Oil leak:900:known,28,21,7,0,0,21,19,28,0,28,28
+maintenance_audit,MetroPT2,Oil leak:900:unknown,28,21,7,0,0,21,12,28,0,28,28
+native_replication,WMCS,replication,34804,3823,30981,0,0,,,34803,0,34803,0
+released_audit,MetroPT2,retained_input_only,1,1,0,0,0,1,0,1,0,1,1

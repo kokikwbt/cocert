@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checked_tasks": 50768,
+  "catalog_tasks": 50768,
+  "all_tasks_finished": true,
+  "acyclic_implications": true,
+  "counts": {
+    "reference_agreement": 43751,
+    "negative": 28863,
+    "direct_smt_calls": 42093,
+    "exact_negative_witnesses": 28863,
+    "checked_implications": 9020,
+    "positive": 14889,
+    "undecided": 7016,
+    "undecided_recovered_after_all_tolerances": 345
+  },
+  "solver_imported": false,
+  "positive_verification": "Agreement with frozen independently certified references; no solver-free SMT UNSAT proof is asserted"
+}

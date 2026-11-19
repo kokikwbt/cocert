@@ -6,7 +6,7 @@ authors:
   - family-names: Kawabata
     given-names: Koki
     affiliation: The University of Osaka
-version: 0.1.0
+version: 0.1.1
 repository-code: https://github.com/kokikwbt/cocert
 url: https://github.com/kokikwbt/cocert
 license: MIT

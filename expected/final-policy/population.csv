@@ -5,7 +5,7 @@ alpi,1/10,common_negative,219,64
 care,1/10,separate_positive,4639,64
 care,1/10,shared_only_positive,16,16
 care,1/10,common_negative,76,64
-hydsys,1/10,separate_positive,1667,64
+hydsys,1/10,separate_positive,131,4
 hydsys,1/10,shared_only_positive,61,61
 hydsys,1/10,common_negative,1344,64
 metro,1/10,separate_positive,2810,64
@@ -14,9 +14,6 @@ metro,1/10,common_negative,469,64
 oyicd,1/10,separate_positive,1276,64
 oyicd,1/10,shared_only_positive,298,64
 oyicd,1/10,common_negative,1498,64
-ppd,1/10,separate_positive,885,64
-ppd,1/10,shared_only_positive,40,40
-ppd,1/10,common_negative,820,64
 scania,1/10,separate_positive,475,64
 scania,1/10,shared_only_positive,203,64
 scania,1/10,common_negative,11440,64

@@ -1,29 +1,45 @@
 {
-  "schema": 1,
+  "schema": 2,
   "policy_sha256": "ef2df6ebe7df3b712bd7540905d43a89a667f8371ce434acb009b5d930251aa7",
   "cohorts": {
-    "balanced": 1800,
-    "strata": 1603,
-    "stratum_population": 70233
+    "balanced": 1500,
+    "strata": 1375,
+    "stratum_population": 66952
   },
+  "timing_methods": [
+    "cocert",
+    "no-pairs",
+    "simple-filter",
+    "symbolic_smt"
+  ],
+  "repetitions": 3,
+  "smt_timeout_ms": 1000,
+  "seed": 20261115,
   "full_counts_included": false,
   "files": {
-    "archive-checks.json": "e2871999ef45d72103c2b3321cd2fa40b9eb1901e897f47e8a6cc629866099ce",
-    "archive-summary.csv": "21816125a05d822dd111e05ee004a0c8c796ff13024a60743106d55e3829858d",
-    "execution-checks.json": "f0e20f16097895bf46c2f2bd9a656056319272d633d50f53e618cbe73b95091b",
+    "archive-checks.json": "28057ea85393dd6d6a4f7766a41afa4c02f4560ffd7ad4f189b558eafb2b2df7",
+    "stratified-timings.csv": "c71c57d037766d793b3d40bb0ef59cccf6d9077427e0f06fa442465d9bc7a086",
+    "latency-summary.csv": "30b41aec9ae30ed32c3e37f4f0cbf2a41b508afafff1cff12b2dafe9380a8953",
     "integer-comparison.csv": "880f7a4741b36fb13345a43e7c6a73c7bd5fdc8e9ea0036d78fa6b9018e5cd9f",
-    "latency-summary.csv": "0496d69b91622710b25894183ecc73a8e63deb5b244600dee8f21b0ef2ce7138",
-    "pair-mechanism.json": "d1ca48f42c82a0f2e7971ef8e2a1c463c6720c04487b7e10688241dbbe99738a",
-    "population.csv": "bf2d7be07c9f4322ab7f29dbf33bb47913bfe29b83e715b6a20c09f4abfce66e",
-    "query-selection.csv": "51ab4797fc804de66d5821cb5795f48c584fa18600580df8a852be11006972a5",
-    "stratified-timings.csv": "93cefd7a73f786a5d9fb4ee7f768f1877c5d45d753ec65ea24e57e757193549d"
+    "query-selection.csv": "60faa2d848ed8bc0bf1aaa99a2aa59a09a1a6b3bd548eb1e043af22d5035e110",
+    "execution-checks.json": "d5421ce8c2b5f55a2eb32d01acfb0369af4c33f564587a0ce914060c2cf8f6e2",
+    "population.csv": "ba7fe7091ae05edd57c8502770c06a6cdd54970d59944462214906b93d1b7fd1",
+    "archive-summary.csv": "df1e67296a3c51245cd3d593a2827d17f25d948a9abc3dbfe01e0b66aa88ea3c",
+    "pair-mechanism.json": "9326c8cd30bfe3cee67054dc35a2a2509b61c9c3df29870c3c7879a24bd009c4"
   },
   "audit_files": {
+    "request.json": "31a2b72e41c2ab9fe03fe7ab88974a8439421a1935f112e3b0736b2522c8605f",
     "audit-statement.json": "8d7d19e0065ce5c62b34c8080c2919f5993828573fc86d4c5f57bffeb9443f4c",
-    "certificate.json": "d6e70281d8977ffc07c7559e79e56e716b4da7542109700a23af9b1146853ac4",
-    "checkpoints.csv": "a3f2ce1e6cc4b23b726e3c42570ec1275788336db7a8e9abf49aff782bb08684",
     "count-metadata.json": "62434ab52529750abcdb9ba4b3e2f35819175d7db58005ffedc588fa8e69db17",
-    "request.json": "31a2b72e41c2ab9fe03fe7ab88974a8439421a1935f112e3b0736b2522c8605f"
+    "certificate.json": "d6e70281d8977ffc07c7559e79e56e716b4da7542109700a23af9b1146853ac4",
+    "checkpoints.csv": "a3f2ce1e6cc4b23b726e3c42570ec1275788336db7a8e9abf49aff782bb08684"
   },
-  "audit_checker_sha256": "0903c92914f347c50e906d8d178a0c4b3c61fbb7a89681ee19372972fc395b47"
+  "audit_checker_sha256": "de6cdf4788e08ff53c7c7f7ac5f4b5a21595457e60e3c2f68941809adf064baa",
+  "measurement_source": {
+    "experiment": "E094-smt-comparisons",
+    "runtime_run": "smt-serial-20261115-v2",
+    "tail_run": "smt-tail-20261115-v2",
+    "timing_lock_sha256": "596d16634499f1a059d40586d30f6cc198fe0a203f6d5356954ffa9b35eed623",
+    "audit_sha256": "d5421ce8c2b5f55a2eb32d01acfb0369af4c33f564587a0ce914060c2cf8f6e2"
+  }
 }

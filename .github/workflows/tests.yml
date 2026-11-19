@@ -31,6 +31,7 @@ jobs:
           python -I -S scripts/verify_offline.py examples/real-small.jsonl examples/real-small-proofs.jsonl
           python -I -S scripts/verify_archive_example.py
           python -I -S scripts/verify_audit_record.py examples/audit-record
-          python -I -S scripts/reproduce_table8.py
+          python -I -S scripts/reproduce_latency.py
+          python -I -S evaluation/vldb/evidence/reproduce.py --checker .
       - name: Check the source archive
         run: python scripts/package_release.py

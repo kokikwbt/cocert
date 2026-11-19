@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "matched_unique_tasks": 53872,
+  "rows": 288,
+  "contradictions": [],
+  "source_catalog_sha256": "2b1c38dec1767e93615cd7495e292d6a4dd97ed9e9abf1eccb8e794ea951971c",
+  "reference_sha256": "56fbb66ba9407d54c8528f2853c89cf688fb7fce69598327de053731dd1edf5b",
+  "refinement_sha256": "116624eaab2c2a5687d1ed410b6b8679a3bb13cfb55f8981997555d895bda8bf",
+  "summary_sha256": "29b248c42c56a78db6330bf6ed029d066041e93a0654abcffcd5b41763411e97"
+}

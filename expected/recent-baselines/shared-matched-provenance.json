@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "run_id": "paper-summary-20261115-v1",
+  "epsilon": "1/10",
+  "domain": "real",
+  "input_sha256": {
+    "themes/certified-change/experiments/E094-smt-comparisons/outputs/smt-catalog-20261115-v2/catalog.sqlite": "2b1c38dec1767e93615cd7495e292d6a4dd97ed9e9abf1eccb8e794ea951971c",
+    "themes/certified-change/experiments/E094-smt-comparisons/outputs/smt-coverage-20261115-v3/results.sqlite": "efdc82a64ae66c621d075dac89657869c6080cea241a66939920bd88613e4bde",
+    "themes/certified-change/experiments/E095-recent-baselines/outputs/refined-highs-complete-20261115-v2/answers.sqlite": "a0d765bf112de33c45cb24d4585c3fe76d2b24aba3bf36c32bfd376b7f861a41",
+    "themes/certified-change/experiments/E095-recent-baselines/outputs/refined-gurobi-complete-20261115-v2/answers.sqlite": "6f926d2ae2538f9e2aa8de4df64f67cfff862a33c878a19aeeb0e7c3428e0bab"
+  },
+  "cohort": "Intersection of existing HiGHS and Gurobi hash-selected coverage samples",
+  "combined": "Union of resolved responses from SMT and both conditional LP backends; no pooled runtime",
+  "rows": 9,
+  "output_sha256": "fcb4225b96c98366615e49d2b263a5c50bb3463246ba78e5db33e1ddde9388f2"
+}

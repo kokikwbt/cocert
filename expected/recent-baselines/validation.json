@@ -1,0 +1,324 @@
+{
+  "passed": true,
+  "controls": [
+    {
+      "source": "baselines/minimum_tv/validation/outputs/validation-20261115-v2/summary.json",
+      "sha256": "55c312e2b99c3f9a2f2d2b7e456677ee0cc19edc0e52c646036a0eca2eec980f",
+      "result": {
+        "passed": true,
+        "distance_controls": 320,
+        "separation_controls": 160,
+        "strictly_stronger_than_singleton_bands": 37,
+        "seed": 20261115,
+        "command": [
+          "baselines/minimum_tv/validation/run.py"
+        ],
+        "python": "3.11.15 (main, Jul 23 2026, 14:34:23) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "started_utc": "2026-11-15T12:36:36.966594+00:00",
+        "git_commit": "95c8e8821d664dd7bfbd0c8ba8252c654b08648c",
+        "git_dirty": true,
+        "source_sha256": {
+          "baselines/minimum_tv/validation/run.py": "3c2dc0b0f3a571b3f666b4b0cccf5443946557c26d42e9d8ef075313c1980074",
+          "baselines/minimum_tv/model.py": "3984df8591aa07d608fa8e4d5e7baa46fd72e86f8ebf557301a03279ff0323f0",
+          "baselines/tv_query_common.py": "e9f73b6478b7afc81f4a27762bd6ba98dc67f25f2cf1fe1301158d72b7c43000"
+        },
+        "packages": {
+          "numpy": "2.4.6",
+          "scipy": "1.17.1",
+          "networkx": "3.6.1",
+          "osqp": "0.6.7.post3",
+          "gurobipy": "12.0.3"
+        }
+      }
+    },
+    {
+      "source": "baselines/eris_tv/validation/outputs/validation-20261115-v2/summary.json",
+      "sha256": "ad1f6c29ddfc072812d5c02dc50d35ad51b29c962f5a0d6fcf3059859e86731c",
+      "result": {
+        "passed": true,
+        "exact_oracle_controls": 160,
+        "statuses": {
+          "positive": 77,
+          "negative": 33,
+          "undecided": 50
+        },
+        "raw_statuses": {
+          "primal infeasible": 60,
+          "solved": 16,
+          "maximum iterations reached": 50,
+          "constant_query": 34
+        },
+        "undecided_is_not_negative": true,
+        "seed": 20261115,
+        "command": [
+          "baselines/eris_tv/validation/run.py"
+        ],
+        "python": "3.11.15 (main, Jul 23 2026, 14:34:23) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "started_utc": "2026-11-15T12:57:06.992649+00:00",
+        "git_commit": "95c8e8821d664dd7bfbd0c8ba8252c654b08648c",
+        "git_dirty": true,
+        "source_sha256": {
+          "baselines/eris_tv/validation/run.py": "7ba0ba83be0561c68864950e692d50a8d3a7ea94c355131b1b351776fc714045",
+          "baselines/eris_tv/model.py": "22b2848cf29b22ac2f1e6fbeafdef714a4ae098a983086afc0e267c00fcfa176",
+          "baselines/tv_query_common.py": "da7e4790dbdbe1ae41319e9a442948ff397c6418e1b1f947fde5307fc2190cc3"
+        },
+        "packages": {
+          "numpy": "2.4.6",
+          "scipy": "1.17.1",
+          "networkx": "3.6.1",
+          "osqp": "0.6.7.post3",
+          "gurobipy": "12.0.3"
+        }
+      }
+    },
+    {
+      "source": "baselines/partial_id_tv/validation/outputs/validation-20261115-v3/summary.json",
+      "sha256": "876e8fa80a6ef1c992dbb5b594819607f41b0c73957ee10e3291857ead2adf8c",
+      "result": {
+        "passed": true,
+        "exact_two_bin_controls": 120,
+        "unmodified_author_function_controls": 12,
+        "unmodified_author_conditional_grid_controls": 36,
+        "author_source": "themes/certified-change/experiments/E095-recent-baselines/outputs/source-inspection-20261115/kallus_original.py",
+        "compatibility_change": "Python 2 print syntax translation only",
+        "seed": 20261115,
+        "command": [
+          "baselines/partial_id_tv/validation/run.py",
+          "--upstream",
+          "themes/certified-change/experiments/E095-recent-baselines/outputs/source-inspection-20261115/kallus_original.py"
+        ],
+        "python": "3.11.15 (main, Jul 23 2026, 14:34:23) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "started_utc": "2026-11-15T13:49:55.363923+00:00",
+        "git_commit": "95c8e8821d664dd7bfbd0c8ba8252c654b08648c",
+        "git_dirty": true,
+        "source_sha256": {
+          "baselines/partial_id_tv/validation/run.py": "d787cebd0900b398265e73d0f1a4849ec694b54706eff5cffb43d5a80bffbf26",
+          "baselines/partial_id_tv/model.py": "a8b934c25758f135aa319a286931b16f04c689ab4a336bf807779952e01bc5b3",
+          "baselines/partial_id_tv/gurobi.py": "52dc6ed282d19e17185d32e7adffee80184f3608395376dc990c690dc1daff46",
+          "baselines/tv_query_common.py": "da7e4790dbdbe1ae41319e9a442948ff397c6418e1b1f947fde5307fc2190cc3"
+        },
+        "packages": {
+          "numpy": "2.4.6",
+          "scipy": "1.17.1",
+          "networkx": "3.6.1",
+          "osqp": "0.6.7.post3",
+          "gurobipy": "12.0.3"
+        }
+      }
+    },
+    {
+      "source": "baselines/partial_id_tv/validation/outputs/validation-20261115-v4/summary.json",
+      "sha256": "4867548dd93038e8ef3dfa69a1746e3d1b83244f86a70ce9be6a8475d7c745dd",
+      "result": {
+        "passed": true,
+        "fixed_total_exact_controls": 48,
+        "unknown_total_controls": 48,
+        "positive": 28,
+        "negative": 18,
+        "meshes": [
+          9,
+          33,
+          129
+        ],
+        "backends": [
+          "highs",
+          "gurobi"
+        ],
+        "reference": "Exact two-bin fixed-total envelope and separately checked CoCert decisions",
+        "seed": 20261115,
+        "command": [
+          "baselines/partial_id_tv/validation/refined.py"
+        ],
+        "python": "3.11.15 (main, Jul 23 2026, 14:34:23) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "started_utc": "2026-11-15T13:49:57.331856+00:00",
+        "git_commit": "95c8e8821d664dd7bfbd0c8ba8252c654b08648c",
+        "git_dirty": true,
+        "source_sha256": {
+          "baselines/partial_id_tv/validation/refined.py": "14b1fae9c2d520d1713237e47a13fa36c5a604d47619774f02e8a064bd889b05",
+          "baselines/partial_id_tv/model.py": "a8b934c25758f135aa319a286931b16f04c689ab4a336bf807779952e01bc5b3",
+          "baselines/partial_id_tv/gurobi.py": "52dc6ed282d19e17185d32e7adffee80184f3608395376dc990c690dc1daff46",
+          "baselines/tv_query_common.py": "da7e4790dbdbe1ae41319e9a442948ff397c6418e1b1f947fde5307fc2190cc3"
+        },
+        "packages": {
+          "numpy": "2.4.6",
+          "scipy": "1.17.1",
+          "networkx": "3.6.1",
+          "osqp": "0.6.7.post3",
+          "gurobipy": "12.0.3"
+        }
+      }
+    },
+    {
+      "source": "baselines/partial_id_tv/validation/outputs/validation-20261115-v5/summary.json",
+      "sha256": "16a66542a71a61d2b344aaca94ceb96640e698d5da65452c8db7f61a169107dd",
+      "result": {
+        "passed": true,
+        "fixed_total_exact_controls": 48,
+        "unknown_total_controls": 48,
+        "positive": 20,
+        "negative": 26,
+        "meshes": [
+          9,
+          33,
+          129
+        ],
+        "backends": [
+          "highs",
+          "gurobi"
+        ],
+        "reference": "Exact two-bin fixed-total envelope and separately checked CoCert decisions",
+        "seed": 20261115,
+        "command": [
+          "baselines/partial_id_tv/validation/refined.py"
+        ],
+        "python": "3.11.15 (main, Jul 23 2026, 14:34:23) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "started_utc": "2026-11-15T14:04:20.533767+00:00",
+        "git_commit": "95c8e8821d664dd7bfbd0c8ba8252c654b08648c",
+        "git_dirty": true,
+        "source_sha256": {
+          "baselines/partial_id_tv/validation/refined.py": "17fe6014c4689167bef1b55534de610c81819e355bdf6b017a01e02116889fb1",
+          "baselines/partial_id_tv/model.py": "a8b934c25758f135aa319a286931b16f04c689ab4a336bf807779952e01bc5b3",
+          "baselines/partial_id_tv/gurobi.py": "52dc6ed282d19e17185d32e7adffee80184f3608395376dc990c690dc1daff46",
+          "baselines/tv_query_common.py": "88e57da021d53e266e8e56c71cdc6903c328a73934f90edf2b7d1c5efd1743f9"
+        },
+        "packages": {
+          "numpy": "2.4.6",
+          "scipy": "1.17.1",
+          "networkx": "3.6.1",
+          "osqp": "0.6.7.post3",
+          "gurobipy": "12.0.3"
+        }
+      }
+    },
+    {
+      "source": "baselines/mmd_miss/validation/outputs/validation-20261115-v3/summary.json",
+      "sha256": "33eb7284805381109b247385ecdc190ea89b5cba499774f8cfb82566f0c24061",
+      "result": {
+        "passed": true,
+        "observed_controls": 60,
+        "exhaustive_missing_completions": 7308,
+        "exact_tv_conversion_controls": 7308,
+        "author_R_execution": false,
+        "seed": 20261115,
+        "command": [
+          "baselines/mmd_miss/validation/run.py"
+        ],
+        "python": "3.11.15 (main, Jul 23 2026, 14:34:23) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "started_utc": "2026-11-15T13:17:35.863643+00:00",
+        "git_commit": "95c8e8821d664dd7bfbd0c8ba8252c654b08648c",
+        "git_dirty": true,
+        "source_sha256": {
+          "baselines/mmd_miss/validation/run.py": "90a060089e1d4ac144d9be733ffc1a4e6f2898fab1da20f9d43a64b629e37e3f",
+          "baselines/mmd_miss/model.py": "f10a6ca8216d3feed5023877f82e04ff30ab2f0d871befc5beae5ef77995d7a8",
+          "baselines/mmd_miss/median.py": "c5220fe997f14b7cb09960384681db821788f86848f4b6f0b317c1f883bb8831",
+          "baselines/tv_query_common.py": "da7e4790dbdbe1ae41319e9a442948ff397c6418e1b1f947fde5307fc2190cc3"
+        },
+        "packages": {
+          "numpy": "2.4.6",
+          "scipy": "1.17.1",
+          "networkx": "3.6.1",
+          "osqp": "0.6.7.post3",
+          "gurobipy": "12.0.3"
+        }
+      }
+    },
+    {
+      "source": "baselines/mmd_miss/validation/outputs/validation-20261115-v2/summary.json",
+      "sha256": "f97742dd898662844bdbfb04ef7b5dc7007fb6b3840bd5014f5266f55d98fea2",
+      "result": {
+        "passed": true,
+        "high_precision_enclosures": 924,
+        "reference_precision": 200,
+        "implementation_precision": 80,
+        "seed": 20261115,
+        "command": [
+          "baselines/mmd_miss/validation/median.py"
+        ],
+        "python": "3.11.15 (main, Jul 23 2026, 14:34:23) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "started_utc": "2026-11-15T13:17:34.247785+00:00",
+        "git_commit": "95c8e8821d664dd7bfbd0c8ba8252c654b08648c",
+        "git_dirty": true,
+        "source_sha256": {
+          "baselines/mmd_miss/validation/median.py": "83c339f3a8d547fb4c0f574de299e797c79f7028bdb09bb62706f6b2ea82cec6",
+          "baselines/mmd_miss/model.py": "f10a6ca8216d3feed5023877f82e04ff30ab2f0d871befc5beae5ef77995d7a8",
+          "baselines/mmd_miss/median.py": "c5220fe997f14b7cb09960384681db821788f86848f4b6f0b317c1f883bb8831",
+          "baselines/tv_query_common.py": "da7e4790dbdbe1ae41319e9a442948ff397c6418e1b1f947fde5307fc2190cc3"
+        },
+        "packages": {
+          "numpy": "2.4.6",
+          "scipy": "1.17.1",
+          "networkx": "3.6.1",
+          "osqp": "0.6.7.post3",
+          "gurobipy": "12.0.3"
+        }
+      }
+    },
+    {
+      "source": "themes/certified-change/experiments/E095-recent-baselines/outputs/gurobi-paired-20261115-v1/validation.json",
+      "sha256": "c8d6be9f9fbf262b94734ddff74ce6c3fdb5631435a62a17d4a74db7110a45f2",
+      "result": {
+        "passed": true,
+        "exact_two_bin_warm_update_controls": 72
+      }
+    },
+    {
+      "source": "themes/certified-change/experiments/E095-recent-baselines/outputs/source-inspection-20261115/mmd-author-checks-v2.json",
+      "sha256": "27cc34ef187bbcdbbe3bb6ddec8a67196aa656a6bb9f10e9041bd26597bc6e20",
+      "result": {
+        "passed": true,
+        "author_R_version": "R version 4.6.0 (2026-04-24)",
+        "author_R_bound_controls": 200,
+        "maximum_absolute_difference": 2.7755575615628914e-17,
+        "shared_permutation_controls": 304,
+        "floating_tie_discrepancy_cases": 0,
+        "ordering_differences_within_roundoff": 0,
+        "inputs_sha256": "a7b6e85bd806ad939c635cab73bbafd83d150e852f05eaf5ce7e790ff3ef46a1",
+        "author_results_sha256": "c5bba5980dd353ecd3f66e40d762c8f011c825c8a25e8520d5a6c746ceb2d031",
+        "python_source_sha256": "f10a6ca8216d3feed5023877f82e04ff30ab2f0d871befc5beae5ef77995d7a8"
+      }
+    },
+    {
+      "source": "themes/certified-change/experiments/E095-recent-baselines/outputs/source-inspection-20261115/mmd-author-median-checks-final.json",
+      "sha256": "56fe659db2bc2062bc39db6ab1268d0e007023ce2fca938e6751db66e1d14aac",
+      "result": {
+        "passed": true,
+        "author_R_version": "R version 4.6.0 (2026-04-24)",
+        "author_R_bound_controls": 200,
+        "maximum_absolute_difference": 2.636779683484747e-16,
+        "shared_permutation_controls": 304,
+        "floating_tie_discrepancy_cases": 1,
+        "ordering_differences_within_roundoff": 4,
+        "inputs_sha256": "a7b6e85bd806ad939c635cab73bbafd83d150e852f05eaf5ce7e790ff3ef46a1",
+        "author_results_sha256": "c3571027266211c07834953bacd5470e93dc928b24e8764a6517709ada38cd8a",
+        "python_source_sha256": "f10a6ca8216d3feed5023877f82e04ff30ab2f0d871befc5beae5ef77995d7a8",
+        "python_median_source_sha256": "c5220fe997f14b7cb09960384681db821788f86848f4b6f0b317c1f883bb8831",
+        "checker_source_sha256": "fc47283038e73ce1f9500f2cde7e1ee8b9484f16f4b970bf7670b0001bc808b3"
+      }
+    },
+    {
+      "source": "themes/certified-change/experiments/E095-recent-baselines/outputs/author-r-real-20261115-v1/checks-final.json",
+      "sha256": "0c833fafd6fa62eea6f4fb89dfa0b6f2835f1d06662553188a1d58bb3e618b44",
+      "result": {
+        "passed": true,
+        "author_R_version": "R version 4.6.0 (2026-04-24)",
+        "author_R_bound_controls": 144,
+        "maximum_absolute_difference": 2.220446049250313e-16,
+        "shared_permutation_controls": 304,
+        "floating_tie_discrepancy_cases": 0,
+        "ordering_differences_within_roundoff": 0,
+        "inputs_sha256": "1f0ac4e79ae02404f5c80ef1e9bf37d8bcfeda25c98a19f42c5f8d9198612c1b",
+        "author_results_sha256": "57a746fd54ab0b6639b10acf38b5727cbd6c71aa68685bcd8807724f254d5de1",
+        "python_source_sha256": "f10a6ca8216d3feed5023877f82e04ff30ab2f0d871befc5beae5ef77995d7a8",
+        "python_median_source_sha256": "c5220fe997f14b7cb09960384681db821788f86848f4b6f0b317c1f883bb8831",
+        "checker_source_sha256": "fc47283038e73ce1f9500f2cde7e1ee8b9484f16f4b970bf7670b0001bc808b3"
+      }
+    }
+  ]
+}

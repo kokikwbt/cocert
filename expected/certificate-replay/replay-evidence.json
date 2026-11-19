@@ -1,0 +1,109 @@
+{
+  "run_id": "replay-20261116-v2",
+  "status": "passed",
+  "total_queries": 1615,
+  "cohorts": {
+    "unknown": 144,
+    "available": 96,
+    "strata": 1375
+  },
+  "checks": {
+    "unknown": {
+      "standard_library_only": true,
+      "isolated": true,
+      "raw_observations_read": false,
+      "certificate_replay_passed": true,
+      "queries": 144,
+      "statuses": {
+        "positive": 101,
+        "negative": 43
+      }
+    },
+    "available": {
+      "standard_library_only": true,
+      "isolated": true,
+      "raw_observations_read": false,
+      "certificate_replay_passed": true,
+      "queries": 96,
+      "statuses": {
+        "positive": 73,
+        "negative": 23
+      }
+    },
+    "strata": {
+      "standard_library_only": true,
+      "isolated": true,
+      "raw_observations_read": false,
+      "certificate_replay_passed": true,
+      "queries": 1375,
+      "statuses": {
+        "positive": 863,
+        "negative": 512
+      }
+    }
+  },
+  "strata": [
+    {
+      "stratum": "separate_positive",
+      "n": 452,
+      "generation_median_ms": 1.1045625433325768,
+      "replay_median_ms": 0.6409371271729469,
+      "replay_p95_ms": 11.220085108652711,
+      "certificate_median_bytes": 551.0,
+      "speedup_paired_median": 1.7148780348978598,
+      "ratio_of_medians": 1.7233555313055342,
+      "generation_mean_ms": 3.679629687252825,
+      "replay_mean_ms": 2.1899134946772745
+    },
+    {
+      "stratum": "shared_only_positive",
+      "n": 411,
+      "generation_median_ms": 3.0404170975089073,
+      "replay_median_ms": 0.8201655000448227,
+      "replay_p95_ms": 14.641104266047478,
+      "certificate_median_bytes": 1285,
+      "speedup_paired_median": 2.813373083812092,
+      "ratio_of_medians": 3.707077531721032,
+      "generation_mean_ms": 8.974136347336346,
+      "replay_mean_ms": 3.7748424966259884
+    },
+    {
+      "stratum": "common_negative",
+      "n": 512,
+      "generation_median_ms": 0.8763750083744526,
+      "replay_median_ms": 0.6552920676767826,
+      "replay_p95_ms": 12.120173359289765,
+      "certificate_median_bytes": 354.0,
+      "speedup_paired_median": 1.3203008247811936,
+      "ratio_of_medians": 1.337380767451495,
+      "generation_mean_ms": 3.1601380305801285,
+      "replay_mean_ms": 1.9901556934200926
+    }
+  ],
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "clarabel": "0.11.1"
+  },
+  "counts_stored_separately": true,
+  "all_answers_match_frozen_reference": true,
+  "aggregate": "Unweighted statistics within the existing fixed answer-stratified sample; not population estimates",
+  "source_sha256": {
+    "outputs/replay-20261116-v2/selection.json": "6db0927c0bcd31032b46ee91e6ea29335ac28ae37a55316b4a6d24e8158de18f",
+    "outputs/replay-20261116-v2/complete.json": "98d9c89c73a9fa3048914526eac91e173516b8d3aaa35ddf0832055aeaf4a6e2",
+    "outputs/replay-20261116-v2/unknown/manifest.json": "47967ec0d15b1e90d524beb84b79b807d8b1b6539feb69ad88a8cc13e05bede3",
+    "outputs/replay-20261116-v2/available/manifest.json": "37770eee1ac7a1f5560f3bb679ad02dd5052eb3a590b22e59286710d0e34db16",
+    "outputs/replay-20261116-v2/strata/manifest.json": "2d9cfce59d4d86ea2f3db92a22c3567b24b2928560f241aeedeb4816d15b8d1a"
+  },
+  "measurement_sha256": {
+    "outputs/replay-20261116-v2/unknown/generation.jsonl": "ba2a9f3ffecd822ee441684ef98a59b53ee244698f81f9e56a97d2c2cdddd234",
+    "outputs/replay-20261116-v2/unknown/replay.jsonl": "49594c5c8a17ac3765fc7d51986dc481df160e78ac2bef2cce19363c95650afc",
+    "outputs/replay-20261116-v2/unknown/certificates.jsonl": "2868d909c4b5ba75f3cae3664e4a38b449fcc7593c9b1f66874b1921b5d9e0b3",
+    "outputs/replay-20261116-v2/available/generation.jsonl": "ef0d2cb94a0a91ab4bcf4765f3ae3a5886ab15a05fd9692d677a9751600db374",
+    "outputs/replay-20261116-v2/available/replay.jsonl": "bcf64f41dc70f43005cf955b6abc3310d86ccd6b57d7024c3d058cd86f3fecb0",
+    "outputs/replay-20261116-v2/available/certificates.jsonl": "fe719659abe9c8087904066019944f15662ea01c2f394eb7a0ea29ed5e94b746",
+    "outputs/replay-20261116-v2/strata/generation.jsonl": "5de13361e4f1b18ecdaf9bce7eaf4b4d1989ba81be6e059c890bf1f84dc5b5be",
+    "outputs/replay-20261116-v2/strata/replay.jsonl": "b3367e7e18c3af280709941a346e8921f5e020abceabf6a85b8c45161d3dd940",
+    "outputs/replay-20261116-v2/strata/certificates.jsonl": "a95fb03375827f629eae0b6c668d7539a071e5ce56b4a818d6ed995128b24063"
+  }
+}

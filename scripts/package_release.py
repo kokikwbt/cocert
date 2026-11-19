@@ -1,6 +1,7 @@
 """Package the documented source, examples, and saved results in a stable ZIP."""
 
 import argparse
+import gzip
 import hashlib
 import json
 import re
@@ -25,6 +26,16 @@ ROOT_FILES = {
     ".github/workflows/tests.yml",
 }
 DATA_FOLDERS = {"docs", "examples", "expected"}
+EVALUATION_FILES = {
+    "evaluation/vldb/README.md",
+    "evaluation/vldb/evidence/records.json.gz",
+    "evaluation/vldb/evidence/wmcs-audit.json",
+    "evaluation/vldb/tables/adaptive-comparison.json",
+    "evaluation/vldb/tables/archive-results.json",
+    "evaluation/vldb/tables/split-total-control.json",
+    "evaluation/vldb/tables/certificate-replay-data.json",
+    "evaluation/vldb/tables/screening-comparison.csv",
+}
 HOME_PATH = re.compile(
     r"(?i)(?:/(?:users|home)/[^\s\"'<>]+|[a-z]:[\\/](?:users|documents and settings)[\\/][^\s\"'<>]+)"
 )
@@ -62,7 +73,7 @@ def mapped_code(root):
         raise ValueError("Duplicate paper-map entry")
     actual = {
         str(path.relative_to(root))
-        for folder in ("src", "scripts", "tests")
+        for folder in ("src", "scripts", "tests", "evaluation/vldb")
         for path in (root / folder).rglob("*.py")
         if not path.is_symlink()
     }
@@ -76,7 +87,7 @@ def mapped_code(root):
 def included_files(root):
     """Select documented files without environments, raw inputs, or run outputs."""
     code = mapped_code(root)
-    files = set(code) | ROOT_FILES
+    files = code | ROOT_FILES | EVALUATION_FILES
     for folder in DATA_FOLDERS:
         files.update(
             str(path.relative_to(root))
@@ -90,7 +101,12 @@ def included_files(root):
         path = root / name
         if not path.is_file() or path.is_symlink():
             raise ValueError(f"Missing regular repository file: {name}")
-        check_public_text(name, path.read_text())
+        if path.suffix == ".gz":
+            with gzip.open(path, "rt", encoding="utf-8") as stream:
+                content = stream.read()
+        else:
+            content = path.read_text(encoding="utf-8")
+        check_public_text(name, content)
         result.append(path)
     return result
 

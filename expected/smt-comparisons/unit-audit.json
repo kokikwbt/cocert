@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "matching_existing_vehicle_coverage": true,
+  "definition": "An eligible vehicle receives evidence if at least one fixed primary query is positive",
+  "undecided_units_may_also_have_positive_queries": true,
+  "source_sha256": "feb437669cadbeee10fb0808f1762dca6204535265d891125f4446764aebe2a3",
+  "input_sha256": {
+    "themes/certified-change/experiments/E069-window-design/outputs/window-design-20261024-v2/manifest.json": "e9df931f853a02fec6dc76314d4c0bc9de664ccbfd1267ed1a52c993b201b7d5",
+    "themes/certified-change/experiments/E069-window-design/outputs/window-design-20261024-v2/data/queries.jsonl.gz": "56ac1ddc40e191e690407b22a0fffd2fd22d200cd8b1c6ac91b8e3d7bacb604d"
+  }
+}

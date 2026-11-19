@@ -1,25 +1,24 @@
 # Data inventory
 
-The package contains synthetic examples and six derived queries with exact proofs: two from ALPI, three from HydSys, and one from MetroPT2. Their attribution and transformations are recorded in [THIRD_PARTY.md](../THIRD_PARTY.md) and `examples/real-small-provenance.json`. No raw waveform or alarm log is bundled.
+The package contains synthetic examples and six derived queries with exact proofs: two from ALPI, three from HydSys, and one from MetroPT2. Their attribution and transformations are recorded in [THIRD_PARTY.md](../THIRD_PARTY.md) and `examples/real-small-provenance.json`. The [VLDB evaluation directory](../evaluation/vldb/) also provides saved outcomes and the retained snapshots for one native WMCS audit.
 
-The saved input inventory for the fixed-cohort validation is:
+The current primary input inventory is:
 
 | ID | Dataset/provider | Primary count-only queries |
 |---|---|---:|
 | scania | [Scania Component X, version 3](https://researchdata.se/en/catalogue/dataset/2024-34) | 12,118 |
 | metro | [MetroPT2, V2](https://zenodo.org/records/7766691) | 3,717 |
 | care | [CARE, v6](https://zenodo.org/records/15846963) | 4,731 |
-| ppd | [Production Plant Data](https://www.kaggle.com/datasets/inIT-OWL/production-plant-data-for-condition-monitoring) | 1,745 |
 | xjtu_sy | [XJTU-SY](https://biaowang.tech/xjtu-sy-bearing-datasets/) | 1,886 |
 | alpi | [ALPI, version 1](https://data.mendeley.com/datasets/4nhx2x67cd/1) | 5,328 |
 | oyicd | [One Year Industrial Component Degradation](https://www.kaggle.com/datasets/inIT-OWL/one-year-industrial-component-degradation) | 3,072 |
-| hydsys | [Condition Monitoring of Hydraulic Systems](https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems) | 3,072 |
+| hydsys | [Condition Monitoring of Hydraulic Systems](https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems), pressure PS6 | 1,536 |
 | wmcs | [Wikimedia Cloud VPS monitoring](https://wikitech.wikimedia.org/wiki/Help:Cloud_VPS_managed_monitoring) | 34,564 |
-| Total | Nine datasets | 70,233 |
+| Total | Eight datasets, nine scenarios | 66,952 |
 
-This table describes the saved research inputs. The complete input pack is not part of the source archive. Its input counts and hash are in `expected/main-input-inventory.json`; this metadata does not imply that the pack is distributed. Redistribution has been checked for the three bundled example sources only. Public availability of the other sources is not recorded as permission to redistribute them.
+This table describes the saved research inputs. The complete input pack is not part of the upload ZIP. Its input counts and hash are in `expected/main-input-inventory.json`; this metadata does not imply that the pack is distributed. Dataset terms for the bundled examples and the provenance of the native WMCS audit appear in [THIRD_PARTY.md](../THIRD_PARTY.md).
 
-Scania and WMCS provide native retained histogram summaries. The other seven evaluations construct retained cumulative archives from real observations. This distinction is preserved by separating count-only replay from archive reconstruction and raw-data acquisition.
+Scania and WMCS provide native retained histogram summaries. The other six datasets supply finer real observations from which retained cumulative archives are constructed. OYICD-LE and OYICD-FS are separate signal scenarios within OYICD. This distinction is preserved by separating count-only replay from archive reconstruction and raw-data acquisition.
 
 ## Input packs for a complete paper artifact
 

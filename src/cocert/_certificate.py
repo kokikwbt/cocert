@@ -9,7 +9,8 @@ from .backends import full
 
 
 def certificate(
-    q, e, solver="socp", candidate=None, _alternative=False, _refined=False
+    q, e, solver="socp", candidate=None, _alternative=False, _refined=False,
+    _compact=False,
 ):
     """Recover a rational single, feasible, or support proof and check it.
 
@@ -52,16 +53,25 @@ def certificate(
             str(max(F(0), min(b, F(float(v))))) for b, v in zip(B, r["allocation"])
         ]
     else:
-        w = [
-            max(F(0), F(float(v)) if _refined else F(float(v)).limit_denominator(10**9))
-            for v in r["weights"]
-        ]
+        if _compact:
+            denominator = 2**44
+            w = [F(max(0, round(float(v) * denominator))) for v in r["weights"]]
+            alpha = [
+                [F(round(max(-1, min(1, float(v))) * denominator), denominator) for v in row]
+                for row in r["subgradients"]
+            ]
+            record["compact_support"] = True
+        else:
+            w = [
+                max(F(0), F(float(v)) if _refined else F(float(v)).limit_denominator(10**9))
+                for v in r["weights"]
+            ]
+            alpha = [
+                [max(F(-1), min(F(1), F(float(v)).limit_denominator(10**9))) for v in row]
+                for row in r["subgradients"]
+            ]
         z = sum(w)
         w = [v / z for v in w]
-        alpha = [
-            [max(F(-1), min(F(1), F(float(v)).limit_denominator(10**9))) for v in row]
-            for row in r["subgradients"]
-        ]
         # Expand the weighted affine tangent for exact verification.
         Q = F(0)
         gradient = [F(0)] * len(B)
@@ -105,12 +115,16 @@ def certificate(
             - Q * s * s
             + sum(b * min(F(0), v + 2 * Q * s) for b, v in zip(B, gradient))
         )
-        record.update(
-            weights=list(map(str, w)),
-            alpha=[list(map(str, row)) for row in alpha],
-            tangent_total=str(s),
-            bound=str(bound),
-        )
+        try:
+            record.update(weights=list(map(str, w)),
+                          alpha=[list(map(str, row)) for row in alpha],
+                          tangent_total=str(s), bound=str(bound))
+        except ValueError as error:
+            if _compact:
+                raise ArithmeticError("Rational support proof exceeds output size") from error
+            # A common denominator keeps the support sum small enough to encode.
+            return certificate(q, e, candidate=r, _alternative=_alternative,
+                               _refined=_refined, _compact=True)
     try:
         assert verify(record) == record["found"]
     except AssertionError:
@@ -129,6 +143,7 @@ def certificate(
                     ),
                     _alternative=True,
                     _refined=_refined,
+                    _compact=_compact,
                 )
             if not _refined:
                 return refined_certificate(q, e, r)
@@ -171,6 +186,7 @@ def certificate(
                     ),
                     _alternative=True,
                     _refined=_refined,
+                    _compact=_compact,
                 )
             if not _refined:
                 return refined_certificate(q, e, r)

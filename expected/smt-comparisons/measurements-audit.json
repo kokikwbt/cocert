@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "calls": {
+    "runtime_calls": 61500,
+    "archive_calls": 18432,
+    "boundary_calls": 960,
+    "scaling_calls": 280
+  },
+  "answers": {
+    "positive": 46633,
+    "cocert_certificates": 63059,
+    "negative": 33654,
+    "smt_resolved": 17228,
+    "smt_rational_models": 7223,
+    "undecided": 885
+  },
+  "unique_cocert_certificates": 13647,
+  "standard_library_only": true,
+  "exact_input_binding": true,
+  "resolved_answers_agree": true,
+  "smt_unsat_comparison": "Frozen certified references and matched CoCert answers; no SMT proof checker is asserted"
+}

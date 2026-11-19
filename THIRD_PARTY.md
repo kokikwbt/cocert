@@ -12,6 +12,8 @@ These dataset licenses apply to the bundled derived examples independently of th
 
 `examples/audit-record/` additionally contains retained cumulative motor-current checkpoints derived from MetroPT2 V2 under the same CC BY 4.0 terms. The request, supplied split count, and certificate describe a constructed 15-minute archive for retrospective investigation; the provider timestamps are preserved. No fine observations are included. `scripts/verify_audit_record.py` reconstructs the query and checks the rational TV bound.
 
+`evaluation/vldb/evidence/wmcs-audit.json` contains eight retained counter snapshots from [Wikimedia Cloud VPS managed monitoring](https://wikitech.wikimedia.org/wiki/Help:Cloud_VPS_managed_monitoring). The record identifies the source metric, intervals, and bin boundaries used to construct the audit query.
+
 ## Independent mathematical adapters
 
 AU-DB/AU-DB+ (`baselines/audb.py`) adapt attribute-range arithmetic from Feng et al., *Uncertainty Annotated Databases: A Lightweight Approach for Approximating Certain Answers*, SIGMOD 2021, and subsequent AU-DB work. They are independent implementations for the TV query, rather than a port of the authors' database system. AU-DB+ uses an explicit nonnegative absolute-value tightening.

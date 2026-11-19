@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "families": {
+    "available": {
+      "requests": 66952,
+      "smt_positive": 23468,
+      "smt_negative": 42191,
+      "smt_undecided": 1293,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "bin_sensitivity": {
+      "requests": 55296,
+      "smt_positive": 12714,
+      "smt_negative": 40634,
+      "smt_undecided": 1948,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "calibration": {
+      "requests": 219336,
+      "smt_positive": 34086,
+      "smt_negative": 185216,
+      "smt_undecided": 34,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "extra_count": {
+      "requests": 17446,
+      "smt_positive": 6480,
+      "smt_negative": 10966,
+      "smt_undecided": 0,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "figure1": {
+      "requests": 2,
+      "smt_positive": 1,
+      "smt_negative": 1,
+      "smt_undecided": 0,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "figure1_complete": {
+      "requests": 2,
+      "smt_positive": 1,
+      "smt_negative": 1,
+      "smt_undecided": 0,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "integer": {
+      "requests": 34556,
+      "smt_positive": 4103,
+      "smt_negative": 25943,
+      "smt_undecided": 4510,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "integer_complete": {
+      "requests": 252660,
+      "smt_positive": 18607,
+      "smt_negative": 221026,
+      "smt_undecided": 13027,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "maintenance_audit": {
+      "requests": 336,
+      "smt_positive": 210,
+      "smt_negative": 126,
+      "smt_undecided": 0,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "native_replication": {
+      "requests": 34804,
+      "smt_positive": 3823,
+      "smt_negative": 30981,
+      "smt_undecided": 0,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "native_replication_thresholds": {
+      "requests": 69608,
+      "smt_positive": 175,
+      "smt_negative": 69433,
+      "smt_undecided": 0,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "pair_mechanism": {
+      "requests": 855,
+      "smt_positive": 183,
+      "smt_negative": 584,
+      "smt_undecided": 88,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "primary": {
+      "requests": 267808,
+      "smt_positive": 72297,
+      "smt_negative": 189741,
+      "smt_undecided": 5770,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "released_audit": {
+      "requests": 1,
+      "smt_positive": 1,
+      "smt_negative": 0,
+      "smt_undecided": 0,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "stationary": {
+      "requests": 98304,
+      "smt_positive": 7909,
+      "smt_negative": 90395,
+      "smt_undecided": 0,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "storage_cases": {
+      "requests": 11215,
+      "smt_positive": 7677,
+      "smt_negative": 3228,
+      "smt_undecided": 310,
+      "not_run": 0,
+      "disagreement": 0
+    },
+    "windows": {
+      "requests": 200856,
+      "smt_positive": 64898,
+      "smt_negative": 131604,
+      "smt_undecided": 4354,
+      "not_run": 0,
+      "disagreement": 0
+    }
+  },
+  "all_requested_families_evaluated": true,
+  "coverage_is_not_timing": true,
+  "direct_smt_budget_ms": 1000,
+  "stress_budget_ms": 10000,
+  "threshold_reuse": "Same counts, total metadata and domain only; SMT answers only; disabled in timings",
+  "created_utc": "2026-11-15T10:57:58.514368+00:00"
+}

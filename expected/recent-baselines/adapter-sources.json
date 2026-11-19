@@ -1,0 +1,68 @@
+{
+  "scope": "Independent TV adapters; package namespace and whitespace changes only; no author source redistributed",
+  "files": [
+    {
+      "source": "baselines/tv_query_common.py",
+      "source_sha256": "88e57da021d53e266e8e56c71cdc6903c328a73934f90edf2b7d1c5efd1743f9",
+      "release": "src/cocert/baselines/recent/tv_query_common.py",
+      "release_sha256": "88e57da021d53e266e8e56c71cdc6903c328a73934f90edf2b7d1c5efd1743f9",
+      "change": "Package namespace and whitespace only"
+    },
+    {
+      "source": "baselines/minimum_tv/model.py",
+      "source_sha256": "3984df8591aa07d608fa8e4d5e7baa46fd72e86f8ebf557301a03279ff0323f0",
+      "release": "src/cocert/baselines/recent/minimum_tv/model.py",
+      "release_sha256": "9561c055e4ddad4739d4394b7aa6e59fba80a31854d477dd483da5155ab44bb4",
+      "change": "Package namespace and whitespace only"
+    },
+    {
+      "source": "baselines/eris_tv/model.py",
+      "source_sha256": "22b2848cf29b22ac2f1e6fbeafdef714a4ae098a983086afc0e267c00fcfa176",
+      "release": "src/cocert/baselines/recent/eris_tv/model.py",
+      "release_sha256": "9413e62f3b3353eb6f481b80f0318803c874f19685abbd153fc5e00bed43a886",
+      "change": "Package namespace and whitespace only"
+    },
+    {
+      "source": "baselines/partial_id_tv/model.py",
+      "source_sha256": "a8b934c25758f135aa319a286931b16f04c689ab4a336bf807779952e01bc5b3",
+      "release": "src/cocert/baselines/recent/partial_id_tv/model.py",
+      "release_sha256": "f5da1fc8ff06c57c2a37eb9ae8014811425c4423333475e3112a0f1778a5febf",
+      "change": "Package namespace and whitespace only"
+    },
+    {
+      "source": "baselines/partial_id_tv/gurobi.py",
+      "source_sha256": "52dc6ed282d19e17185d32e7adffee80184f3608395376dc990c690dc1daff46",
+      "release": "src/cocert/baselines/recent/partial_id_tv/gurobi.py",
+      "release_sha256": "1f56577a9f34ea1596abc9cf266e6060efae7a83651d5661627d2f8a4387897e",
+      "change": "Package namespace and whitespace only"
+    },
+    {
+      "source": "baselines/mmd_miss/model.py",
+      "source_sha256": "f10a6ca8216d3feed5023877f82e04ff30ab2f0d871befc5beae5ef77995d7a8",
+      "release": "src/cocert/baselines/recent/mmd_miss/model.py",
+      "release_sha256": "77a0a5e1ba8befc7fe6958408c60a939dd24f812a7d8f4388b78e9ef98f270fa",
+      "change": "Package namespace and whitespace only"
+    },
+    {
+      "source": "baselines/mmd_miss/median.py",
+      "source_sha256": "c5220fe997f14b7cb09960384681db821788f86848f4b6f0b317c1f883bb8831",
+      "release": "src/cocert/baselines/recent/mmd_miss/median.py",
+      "release_sha256": "5fd029216337c015cf49497dd28964517473a03e65f49f32290f97164a1523c0",
+      "change": "Package namespace and whitespace only"
+    },
+    {
+      "source": "baselines/density_bands/model.py",
+      "source_sha256": "6f235ffaef3310a165d53fb4546e43e0a9fbe9f30f7391f7a1906d24a4f71036",
+      "release": "src/cocert/baselines/recent/density_bands/model.py",
+      "release_sha256": "6f235ffaef3310a165d53fb4546e43e0a9fbe9f30f7391f7a1906d24a4f71036",
+      "change": "Package namespace and whitespace only"
+    },
+    {
+      "source": "baselines/partial_id_tv/interval_search.py",
+      "source_sha256": "1a274d0ff381a7241068b2093569570057263aebce19ac55a2da180e41e13476",
+      "release": "src/cocert/baselines/recent/partial_id_tv/interval_search.py",
+      "release_sha256": "49fd349a49888ca06366dde12b3b7b63a5a6fe5d77c343048e0c4a7409527d7f",
+      "change": "Package namespace only"
+    }
+  ]
+}

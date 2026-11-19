@@ -25,6 +25,10 @@ def test_packaged_code_has_an_explicit_paper_mapping():
     assert "src/cocert/api.py" in names and "docs/PAPER_GUIDE.md" in names
     assert not any("outputs/" in name or "data/local/" in name for name in names)
     assert {"LICENSE", "CITATION.cff", ".github/workflows/tests.yml"} <= names
+    assert {
+        "evaluation/vldb/evidence/records.json.gz",
+        "evaluation/vldb/tables/split-total-control.json",
+    } <= names
     packaging_module().check_sources(ROOT)
 
 

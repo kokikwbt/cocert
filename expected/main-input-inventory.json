@@ -1,18 +1,32 @@
 {
-  "schema": 1,
-  "queries": 70233,
+  "schema": 2,
+  "queries": 66952,
   "datasets": {
     "alpi": 5328,
     "care": 4731,
-    "hydsys": 3072,
+    "hydsys": 1536,
     "metro": 3717,
     "oyicd": 3072,
-    "ppd": 1745,
     "scania": 12118,
     "wmcs": 34564,
     "xjtu_sy": 1886
   },
+  "scenarios": {
+    "ALPI": 5328,
+    "CARE": 4731,
+    "HydSys-PS6": 1536,
+    "MetroPT2": 3717,
+    "OYICD-FS": 1536,
+    "OYICD-LE": 1536,
+    "Scania": 12118,
+    "WMCS": 34564,
+    "XJTU-SY": 1886
+  },
   "file": "main-unknown.jsonl.gz",
-  "sha256": "1631374e48ab6677d47d18c3ce75e98fcc322336e9b2d5a191dc4e0f04e839d3",
-  "note": "Inventory and hash of the local full pack; pack is not bundled in the upload"
+  "sha256": "ec5982ff44c3f47ef5b74e7cf3ec42f8bb82993bba9728d0e87fdaefec0da972",
+  "note": "Inventory of the current scoped query pack; complete counts are not bundled",
+  "input_sha256": {
+    "themes/certified-change/experiments/E069-window-design/outputs/window-design-20261024-v2/manifest.json": "e9df931f853a02fec6dc76314d4c0bc9de664ccbfd1267ed1a52c993b201b7d5",
+    "themes/certified-change/experiments/E069-window-design/outputs/window-design-20261024-v2/data/queries.jsonl.gz": "56ac1ddc40e191e690407b22a0fffd2fd22d200cd8b1c6ac91b8e3d7bacb604d"
+  }
 }

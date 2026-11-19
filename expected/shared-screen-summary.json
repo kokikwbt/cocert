@@ -1,0 +1,19 @@
+{
+  "scope": "Unknown-total, fixed answer-stratified real queries; optional two-scale screen; three fresh-process passes.",
+  "queries": 1603,
+  "timed_calls": 19236,
+  "shared_positive_sample": 451,
+  "paired_sample_returns": 196,
+  "population_weighted_solver_avoidance": 0.3645742595818815,
+  "mean_ms": {
+    "simple": 8.66660289136808,
+    "single_screen": 8.971534017123604,
+    "paired_screen": 6.228434858486664
+  },
+  "p95_ms": {
+    "single_screen": 51.38037446886301,
+    "paired_screen": 29.044583439826965
+  },
+  "packaged_input_parity_queries": 1603,
+  "complete_empirical_inputs_bundled": false
+}

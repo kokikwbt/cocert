@@ -4,11 +4,11 @@
 
 ## Frozen evaluation cohorts
 
-`expected/final-policy/query-selection.csv` lists the frozen input hashes and identifiers. The balanced cohort has 200 queries for each of nine datasets (1,800 total). The answer-stratified cohort has 1,603 queries: 576 separate-positive, 451 shared-only positive, and 576 common-negative. Stratum labels are used after execution for analysis. Each query's weight is its original dataset/stratum population divided by the sampled count; the weights sum to 70,233.
+`expected/final-policy/query-selection.csv` lists the frozen input hashes and identifiers. The balanced cohort has 200 queries per source except the pressure-only HydSys selection of 100, giving 1,500 inputs. The answer-stratified cohort has 1,375 queries. Stratum labels are used after execution for analysis. Each query's weight is its original source/stratum population divided by the sampled count; the weights sum to 66,952.
 
-Both cohorts retain the query selection used before paired screening was added. The available-information replay uses metadata-derived totals for six regular archives, supplied explicitly to every processor. Scania, ALPI, and WMCS retain unknown totals. Full query packs and raw provider records are separate data products described in DATA.md; this selection manifest does not contain their histogram counts.
+Both cohorts preserve the frozen selection within the current dataset and signal scope. The available-information replay uses metadata-derived totals for five regular sources, supplied explicitly to every processor. Scania, ALPI, and WMCS retain unknown totals. Full query packs and raw provider records are separate data products described in DATA.md; this selection manifest does not contain their histogram counts.
 
-The runner uses three randomized fresh-process repetitions. The timing boundary starts before the public API call and includes validation, proof recovery, and exact checking. Warmup is outside the timer. Each query contributes its median time across repetitions. Table 6 pools 200 query medians per dataset with unit weights, giving equal dataset weights. Table 8 instead uses the dataset/answer-stratum population weights defined above. P95 is the first sorted median whose cumulative weight reaches 95% of total weight. Backend calls are instrumented directly.
+The runner uses three randomized fresh-process repetitions with seed 20261115. The timing boundary starts before the public API call and includes validation, proof recovery, and exact checking. Warmup is outside the timer. Each query contributes its median time across repetitions. The scenario comparison uses unit query weights within each scenario. The answer-stratified comparison instead uses the source/stratum population weights defined above. P95 is the first sorted median whose cumulative weight reaches 95% of total weight. Backend calls are instrumented directly. SMT uses a fresh solver per call and a one-second watchdog; completion and timeout costs remain in the reported aggregates.
 
 ```sh
 uv run --frozen python scripts/benchmark_policy.py examples/sharing-gap.jsonl --output runs/policy-demo
@@ -20,17 +20,15 @@ For a separately supplied full count pack, select `--cohort strata` and pass `--
 
 `latency-summary.csv`, `archive-summary.csv`, `integer-comparison.csv`, and `pair-mechanism.json` in `expected/final-policy/` are the complete aggregates used for the revised tables and mechanism discussion. The archive protocol additionally includes retained-file reads, request construction, and compressed proof writes for the same 512-request batches. It is distinct from the public repeated-call runner.
 
-Table 7 uses a different aggregation: each of three fresh processes measures the complete wall time for the same 512-request batch. The reported entry is their arithmetic mean divided by 512, including reads, construction, certification, checking, and response writes. It does not take medians across the individual requests.
+The archive comparison uses a different aggregation: each of three fresh processes measures the same 512-request batch after untimed initialization and warmup. The reported entry is their arithmetic mean divided by 512, including reads, construction, certification, checking, response writes, and any SMT worker restarts. Query-only measurements instead restart workers outside the individual timers. The archive aggregation does not take medians across individual requests.
 
-## Rebuild Table 8
+## Rebuild stratified latency
 
 ```sh
-python -I -S scripts/reproduce_table8.py
+python -I -S scripts/reproduce_latency.py
 ```
 
-The script reads the 14,427 saved repetitions in `expected/final-policy/stratified-timings.csv` and the exact population weights in `query-selection.csv`. It reconstructs each query's three-pass median, then the weighted mean, empirical P95, and solver rate for all twelve method/stratum rows. It checks the results against the saved full-precision aggregates. Use `--output runs/table8.csv` to save a new CSV. This rebuilds the reported aggregation; measuring algorithm performance on another machine uses the benchmark runner and separately supplied count inputs.
-
-The complete CoCert policy reduces the weighted mean by 13.3% relative to Simple filter. Adding pairs to the no-pair policy supplies a further 2.5% mean reduction. Its overall P95 is 17.014 ms without pairs and 17.052 ms with pairs; the large tail improvement is confined to the sharing-required stratum. These comparisons use the same records and weights.
+The script reads the saved repetitions in `expected/final-policy/stratified-timings.csv` and exact population weights in `query-selection.csv`. It reconstructs each query's three-pass median, then the weighted mean, empirical P95, solver rate, and completion rate. It checks the results against the saved full-precision aggregates. Use `--output runs/latency.csv` to save a new CSV. This rebuilds the reported aggregation; measuring algorithm performance on another machine uses the benchmark runner and separately supplied count inputs. The no-pair control isolates paired screening, whereas Symb-SMT evaluates generic execution of the same shared query.
 
 ## One audit record
 

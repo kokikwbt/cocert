@@ -1,0 +1,2 @@
+scenario,epsilon,condition,queries,eligible_units,separate,cocert,symbolic_smt,units_with_smt_undecided
+Scania,1/10,unknown,12118,1244,281,359,298,401
