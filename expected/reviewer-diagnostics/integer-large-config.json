@@ -1,9 +1,0 @@
-{
-  "seed": 20261025,
-  "max_per_dataset_band": 8,
-  "max_nodes": 2048,
-  "max_total_slices": 1024,
-  "repetitions": 3,
-  "epsilon": "1/10",
-  "oracle_multipliers": [11, 31, 127, 511, 2047]
-}

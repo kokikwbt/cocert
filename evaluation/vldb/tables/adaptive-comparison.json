@@ -1,0 +1,287 @@
+{
+  "threshold": "0.1",
+  "timing_requests_per_scenario": 128,
+  "wall_budget_seconds": null,
+  "repetitions": 1,
+  "scenarios": [
+    {
+      "scenario": "Scania",
+      "requests": 12118,
+      "jointly_resolved": 128,
+      "timings": {
+        "CoCert": {
+          "undecided": 0,
+          "mean_ms": 1.663728486164473,
+          "median_ms": 1.3110414147377014,
+          "p95_ms": 4.03464613482356
+        },
+        "Symb-SMT": {
+          "undecided": 0,
+          "mean_ms": 602.5616624756367,
+          "median_ms": 10.030124802142382,
+          "p95_ms": 481.27107946202113
+        },
+        "Adaptive LP (HiGHS)": {
+          "undecided": 0,
+          "mean_ms": 9.76532680215314,
+          "median_ms": 4.266312345862389,
+          "p95_ms": 18.71286015957592
+        },
+        "Adaptive LP (Gurobi)": {
+          "undecided": 0,
+          "mean_ms": 9.4820335143595,
+          "median_ms": 4.6903956681489944,
+          "p95_ms": 18.248531362041827
+        }
+      }
+    },
+    {
+      "scenario": "MetroPT2",
+      "requests": 3717,
+      "jointly_resolved": 128,
+      "timings": {
+        "CoCert": {
+          "undecided": 0,
+          "mean_ms": 1.1695097709889524,
+          "median_ms": 1.0346039198338985,
+          "p95_ms": 2.331003500148654
+        },
+        "Symb-SMT": {
+          "undecided": 0,
+          "mean_ms": 6.046487418643665,
+          "median_ms": 5.9667713940143585,
+          "p95_ms": 7.683551916852592
+        },
+        "Adaptive LP (HiGHS)": {
+          "undecided": 0,
+          "mean_ms": 23.586550858453847,
+          "median_ms": 14.919562265276909,
+          "p95_ms": 72.18503993935879
+        },
+        "Adaptive LP (Gurobi)": {
+          "undecided": 0,
+          "mean_ms": 16.483349550981075,
+          "median_ms": 11.410499922931194,
+          "p95_ms": 49.745446117594796
+        }
+      }
+    },
+    {
+      "scenario": "CARE",
+      "requests": 4731,
+      "jointly_resolved": 128,
+      "timings": {
+        "CoCert": {
+          "undecided": 0,
+          "mean_ms": 1.2491611341829412,
+          "median_ms": 1.2598955072462559,
+          "p95_ms": 1.3009354006499052
+        },
+        "Symb-SMT": {
+          "undecided": 0,
+          "mean_ms": 7.742085857898928,
+          "median_ms": 7.781770545989275,
+          "p95_ms": 8.227483183145523
+        },
+        "Adaptive LP (HiGHS)": {
+          "undecided": 0,
+          "mean_ms": 10.157090495340526,
+          "median_ms": 9.804041590541601,
+          "p95_ms": 21.96663739159702
+        },
+        "Adaptive LP (Gurobi)": {
+          "undecided": 0,
+          "mean_ms": 9.194660779030528,
+          "median_ms": 8.9375632815063,
+          "p95_ms": 18.36198521777987
+        }
+      }
+    },
+    {
+      "scenario": "XJTU-SY",
+      "requests": 1886,
+      "jointly_resolved": 128,
+      "timings": {
+        "CoCert": {
+          "undecided": 0,
+          "mean_ms": 1.2994251374038868,
+          "median_ms": 1.2549986131489277,
+          "p95_ms": 1.6776354983448982
+        },
+        "Symb-SMT": {
+          "undecided": 0,
+          "mean_ms": 7.5143707799725235,
+          "median_ms": 7.532395888119936,
+          "p95_ms": 8.032664982602
+        },
+        "Adaptive LP (HiGHS)": {
+          "undecided": 0,
+          "mean_ms": 41.01834665198112,
+          "median_ms": 21.532458253204823,
+          "p95_ms": 93.27110010199249
+        },
+        "Adaptive LP (Gurobi)": {
+          "undecided": 0,
+          "mean_ms": 34.002929081907496,
+          "median_ms": 18.43964634463191,
+          "p95_ms": 76.2894501443952
+        }
+      }
+    },
+    {
+      "scenario": "ALPI",
+      "requests": 5328,
+      "jointly_resolved": 128,
+      "timings": {
+        "CoCert": {
+          "undecided": 0,
+          "mean_ms": 19.748400707612745,
+          "median_ms": 18.430312629789114,
+          "p95_ms": 26.587601890787482
+        },
+        "Symb-SMT": {
+          "undecided": 0,
+          "mean_ms": 722.3494765639771,
+          "median_ms": 250.5382914096117,
+          "p95_ms": 831.1690772417933
+        },
+        "Adaptive LP (HiGHS)": {
+          "undecided": 0,
+          "mean_ms": 386.0772483749315,
+          "median_ms": 234.71658350899816,
+          "p95_ms": 865.4288212303071
+        },
+        "Adaptive LP (Gurobi)": {
+          "undecided": 0,
+          "mean_ms": 427.8540107770823,
+          "median_ms": 262.096896301955,
+          "p95_ms": 949.5452072471379
+        }
+      }
+    },
+    {
+      "scenario": "OYICD-LE",
+      "requests": 1536,
+      "jointly_resolved": 128,
+      "timings": {
+        "CoCert": {
+          "undecided": 0,
+          "mean_ms": 1.502117476775311,
+          "median_ms": 1.3358746655285358,
+          "p95_ms": 3.1965087633579925
+        },
+        "Symb-SMT": {
+          "undecided": 0,
+          "mean_ms": 9.341832046629861,
+          "median_ms": 9.191979188472033,
+          "p95_ms": 14.201066503301261
+        },
+        "Adaptive LP (HiGHS)": {
+          "undecided": 0,
+          "mean_ms": 52.057833738217596,
+          "median_ms": 3.528499510139227,
+          "p95_ms": 219.26324767991827
+        },
+        "Adaptive LP (Gurobi)": {
+          "undecided": 0,
+          "mean_ms": 39.97513019567123,
+          "median_ms": 3.785062115639448,
+          "p95_ms": 166.71925159171167
+        }
+      }
+    },
+    {
+      "scenario": "OYICD-FS",
+      "requests": 1536,
+      "jointly_resolved": 128,
+      "timings": {
+        "CoCert": {
+          "undecided": 0,
+          "mean_ms": 1.2854130691266619,
+          "median_ms": 1.2330827303230762,
+          "p95_ms": 2.3326977621763945
+        },
+        "Symb-SMT": {
+          "undecided": 0,
+          "mean_ms": 6.812033556343522,
+          "median_ms": 7.207582704722881,
+          "p95_ms": 8.60636979341507
+        },
+        "Adaptive LP (HiGHS)": {
+          "undecided": 0,
+          "mean_ms": 20.529263332718983,
+          "median_ms": 10.113561991602182,
+          "p95_ms": 58.49648755975067
+        },
+        "Adaptive LP (Gurobi)": {
+          "undecided": 0,
+          "mean_ms": 16.36265267734416,
+          "median_ms": 9.008958470076323,
+          "p95_ms": 47.28478766046464
+        }
+      }
+    },
+    {
+      "scenario": "HydSys-PS6",
+      "requests": 1536,
+      "jointly_resolved": 128,
+      "timings": {
+        "CoCert": {
+          "undecided": 0,
+          "mean_ms": 1.2006877514068037,
+          "median_ms": 1.0299994610249996,
+          "p95_ms": 2.6796663645654917
+        },
+        "Symb-SMT": {
+          "undecided": 0,
+          "mean_ms": 6.649031369306613,
+          "median_ms": 6.179186515510082,
+          "p95_ms": 8.643779344856739
+        },
+        "Adaptive LP (HiGHS)": {
+          "undecided": 0,
+          "mean_ms": 46.13123965100385,
+          "median_ms": 3.2038954086601734,
+          "p95_ms": 198.94772693514807
+        },
+        "Adaptive LP (Gurobi)": {
+          "undecided": 0,
+          "mean_ms": 36.49735963699641,
+          "median_ms": 3.5579162649810314,
+          "p95_ms": 161.7989985272287
+        }
+      }
+    },
+    {
+      "scenario": "WMCS",
+      "requests": 34564,
+      "jointly_resolved": 128,
+      "timings": {
+        "CoCert": {
+          "undecided": 0,
+          "mean_ms": 2.6624004094628617,
+          "median_ms": 2.3345001973211765,
+          "p95_ms": 5.298197874799371
+        },
+        "Symb-SMT": {
+          "undecided": 0,
+          "mean_ms": 13.857980266038794,
+          "median_ms": 13.367249630391598,
+          "p95_ms": 16.325956536456943
+        },
+        "Adaptive LP (HiGHS)": {
+          "undecided": 0,
+          "mean_ms": 97.76461684668902,
+          "median_ms": 59.8019789904356,
+          "p95_ms": 279.77498327381903
+        },
+        "Adaptive LP (Gurobi)": {
+          "undecided": 0,
+          "mean_ms": 91.87163149181288,
+          "median_ms": 56.297020986676216,
+          "p95_ms": 258.0308389849961
+        }
+      }
+    }
+  ]
+}

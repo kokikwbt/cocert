@@ -1,8 +1,0 @@
-{
-  "status": "passed",
-  "sampled_query_threshold_pairs": 2970,
-  "timings": 26730,
-  "returned_proofs": 21276,
-  "unique_proofs": 5131,
-  "standard_library_only": true
-}

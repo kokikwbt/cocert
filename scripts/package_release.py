@@ -1,6 +1,7 @@
 """Package the documented source, examples, and saved results in a stable ZIP."""
 
 import argparse
+import gzip
 import hashlib
 import json
 import re
@@ -11,8 +12,6 @@ import zipfile
 ROOT_FILES = {
     "README.md",
     "LICENSE",
-    "CITATION.cff",
-    "CONTRIBUTING.md",
     "THIRD_PARTY.md",
     "pyproject.toml",
     "uv.lock",
@@ -24,31 +23,65 @@ ROOT_FILES = {
     ".python-version",
     ".github/workflows/tests.yml",
 }
-DATA_FOLDERS = {"docs", "examples", "expected"}
+REVIEW_FILES = {
+    "docs/DATA.md",
+    "docs/DEPENDENCIES.md",
+    "docs/FORMATS.md",
+    "docs/INTEGER_DOMAIN.md",
+    "docs/PAPER_GUIDE.md",
+    "docs/RECENT_BASELINES.md",
+    "docs/SAMPLING.md",
+    "examples/integer-gap-proof.jsonl",
+    "examples/integer-gap.jsonl",
+    "examples/real-small-proofs.jsonl",
+    "examples/real-small-provenance.json",
+    "examples/real-small.jsonl",
+    "examples/retained-example.json",
+    "examples/sharing-gap.jsonl",
+    "examples/toy-proofs.jsonl",
+    "examples/toy-totals.jsonl",
+    "examples/toy.jsonl",
+    "expected/main-input-inventory.json",
+    "expected/real-small-comparison.jsonl",
+    "expected/toy-comparison.jsonl",
+
+    "evaluation/vldb/README.md",
+    "evaluation/vldb/evidence/records.json.gz",
+    "evaluation/vldb/evidence/wmcs-audit.json",
+    "evaluation/vldb/tables/adaptive-comparison.json",
+    "evaluation/vldb/tables/archive-results.json",
+    "evaluation/vldb/tables/split-total-control.json",
+    "evaluation/vldb/tables/certificate-replay-data.json",
+    "evaluation/vldb/tables/screening-comparison.csv",
+}
 HOME_PATH = re.compile(
     r"(?i)(?:/(?:users|home)/[^\s\"'<>]+|[a-z]:[\\/](?:users|documents and settings)[\\/][^\s\"'<>]+)"
 )
+RESEARCH_PATH = re.compile(r"(?:themes/[\w-]+/|experiments/E[0-9]{3}-[\w-]+/)")
+EMAIL = re.compile(r"(?i)\b[\w.+-]+@[\w-]+(?:\.[\w-]+)+\b")
+ACCESS_TOKEN = re.compile(r"\b(?:gh[pousr]_[A-Za-z0-9]{36,}|github_pat_[A-Za-z0-9_]{50,})\b")
 NON_ENGLISH = re.compile(r"[\u3040-\u30ff\u3400-\u9fff]")
 
 
 def check_public_text(name, content):
-    """Require English text without machine-specific home paths."""
+    """Check artifact text for local paths and unnecessary contact data."""
     if HOME_PATH.search(content):
         raise ValueError(f"Personal home path in {name}")
+    if RESEARCH_PATH.search(content):
+        raise ValueError(f"Internal research path in {name}")
+    if EMAIL.search(content) or ACCESS_TOKEN.search(content):
+        raise ValueError(f"Contact address or access token in {name}")
     if NON_ENGLISH.search(content):
         raise ValueError(f"Use English text in {name}")
 
 
 def check_project_metadata(root):
-    """Check the public package name, license, and repository URL."""
+    """Check the package name, license, and reviewer metadata."""
     project = tomllib.loads((root / "pyproject.toml").read_text())["project"]
     if project.get("name") != "cocert" or project.get("license") != "MIT":
         raise ValueError("Expected the cocert package under the MIT license")
-    if (
-        project.get("urls", {}).get("Repository")
-        != "https://github.com/kokikwbt/cocert"
-    ):
-        raise ValueError("Unexpected repository URL")
+    if {"authors", "maintainers", "urls"} & project.keys():
+        raise ValueError("Package metadata must omit contact and hosting records")
 
 
 def mapped_code(root):
@@ -62,7 +95,7 @@ def mapped_code(root):
         raise ValueError("Duplicate paper-map entry")
     actual = {
         str(path.relative_to(root))
-        for folder in ("src", "scripts", "tests")
+        for folder in ("src", "scripts", "tests", "evaluation/vldb")
         for path in (root / folder).rglob("*.py")
         if not path.is_symlink()
     }
@@ -76,21 +109,18 @@ def mapped_code(root):
 def included_files(root):
     """Select documented files without environments, raw inputs, or run outputs."""
     code = mapped_code(root)
-    files = set(code) | ROOT_FILES
-    for folder in DATA_FOLDERS:
-        files.update(
-            str(path.relative_to(root))
-            for path in (root / folder).rglob("*")
-            if path.is_file()
-            and not path.is_symlink()
-            and path.suffix in {".md", ".json", ".jsonl", ".csv"}
-        )
+    files = code | ROOT_FILES | REVIEW_FILES
     result = []
     for name in sorted(files):
         path = root / name
         if not path.is_file() or path.is_symlink():
             raise ValueError(f"Missing regular repository file: {name}")
-        check_public_text(name, path.read_text())
+        if path.suffix == ".gz":
+            with gzip.open(path, "rt", encoding="utf-8") as stream:
+                content = stream.read()
+        else:
+            content = path.read_text(encoding="utf-8")
+        check_public_text(name, content)
         result.append(path)
     return result
 

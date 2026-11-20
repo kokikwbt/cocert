@@ -92,6 +92,26 @@ def test_tampered_witness_is_rejected():
         verify(p)
 
 
+@pytest.mark.skipif(not hasattr(sys, "set_int_max_str_digits"), reason="Integer encoding limit unavailable")
+def test_large_support_is_recovered_with_a_common_denominator(monkeypatch):
+    bins = 256
+    query = dict(query_id="large-support", A=[[10] * (bins // 2) + [0] * (bins // 2)],
+                 B=[1] * bins, C=[[0] * (bins // 2) + [10] * (bins // 2)])
+    rng = random.Random(2811)
+    support = [(.75 + rng.random() * .24) * (1 if j < bins // 2 else -1) for j in range(bins)]
+    proposal = dict(kind="support", found=True, stage="solver", weights=[1], subgradients=[support])
+    engine = Engine()
+    monkeypatch.setattr(engine, "propose", lambda *args: proposal)
+    previous_limit = sys.get_int_max_str_digits()
+    try:
+        sys.set_int_max_str_digits(640)
+        result = engine.query(query)
+        assert result["proof"]["compact_support"]
+        assert verify(result["proof"], query, epsilon="1/10")
+    finally:
+        sys.set_int_max_str_digits(previous_limit)
+
+
 def test_replay_requires_complete_unique_results():
     queries = indexed(ROOT / "examples/toy.jsonl")
     results = [dict(Engine().query(q), dataset=q["dataset"]) for q in queries.values()]

@@ -49,12 +49,12 @@ class IsolatedSMT:
             self.connection.close()
             self.connection = None
 
-    def decide(self, q, epsilon, total=None, timeout_ms=1000, seed=20261020):
+    def decide(self, q, epsilon, total=None, timeout_ms=1000, seed=20261020, domain="real"):
         if self.process is None:
             self.start()
         start = time.perf_counter()
         self.connection.send(
-            dict(q=q, epsilon=epsilon, total=total, timeout_ms=timeout_ms, seed=seed)
+            dict(q=q, epsilon=epsilon, total=total, timeout_ms=timeout_ms, seed=seed, domain=domain)
         )
         remaining = max(0, timeout_ms / 1000 - (time.perf_counter() - start))
         if self.connection.poll(remaining):

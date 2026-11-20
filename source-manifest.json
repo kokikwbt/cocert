@@ -2,12 +2,20 @@
   "schema": 3,
   "files": [
     {
+      "file": "evaluation/vldb/evidence/reproduce.py",
+      "sha256": "075af7f86c1efb7d8e21988b53002800bc68f823f51f57a7bcdb0276a1d29657"
+    },
+    {
       "file": "scripts/audit_integer.py",
       "sha256": "1d45f50952027e7a897bbe2a9d06a6413bfcf64dd258ab266689eefe7d417dfb"
     },
     {
+      "file": "scripts/benchmark_certificates.py",
+      "sha256": "467f874e7d919e6920ace2a79da1c31e35febf6934acc0ca8ab1532a4df8d8bb"
+    },
+    {
       "file": "scripts/benchmark_policy.py",
-      "sha256": "11977c74becdee457d70a806f748be1039a867dcf1e361cc378679b690a2e61b"
+      "sha256": "e0f970765c195fdf2c3fbe72eb390a4c2d58d30769b59d5c1329b370932f7ddc"
     },
     {
       "file": "scripts/construct_queries.py",
@@ -19,19 +27,11 @@
     },
     {
       "file": "scripts/package_release.py",
-      "sha256": "26e645db75b61dbee51dbc36ae4873ec3f69a9f9a6b668b33be668f0b2512b81"
-    },
-    {
-      "file": "scripts/reproduce_table8.py",
-      "sha256": "2a94006271eb1a105649dd668967bbd811d1e528aff2e055741bd6e418438a6b"
+      "sha256": "f6208f2f822b985b8c24330f9fb7efbf44503b75267ab3103f96554e4c0f9e2c"
     },
     {
       "file": "scripts/verify_archive_example.py",
       "sha256": "f97e80380dccf56b1b0aa60f7696810e22cf6782fc50dc3fd39e548cd489550e"
-    },
-    {
-      "file": "scripts/verify_audit_record.py",
-      "sha256": "0903c92914f347c50e906d8d178a0c4b3c61fbb7a89681ee19372972fc395b47"
     },
     {
       "file": "scripts/verify_offline.py",
@@ -43,7 +43,7 @@
     },
     {
       "file": "src/cocert/_certificate.py",
-      "sha256": "b2d3c0c0db5297fd991e2917acc6ae656a331016b874d3b5f004dfeee3870ea9"
+      "sha256": "f4921d9856a10472eff9cb45e7396eb7c4bfbf8f8463e969e2836fe736261177"
     },
     {
       "file": "src/cocert/_facets.py",
@@ -55,7 +55,7 @@
     },
     {
       "file": "src/cocert/_screen.py",
-      "sha256": "72944760822f346ed52802dd1537b23742fe672f9c5b6608a330503dfdf67fca"
+      "sha256": "096d7e91d55ec6e5d625ef2186fe108d09e42904977380c1609bf1547e61bb0c"
     },
     {
       "file": "src/cocert/_split.py",
@@ -122,12 +122,72 @@
       "sha256": "e50286c2594441b9b4b3f6283021c46eb2ed47012194376357537334d01042b9"
     },
     {
+      "file": "src/cocert/baselines/recent/__init__.py",
+      "sha256": "5adac559bd44e51156b43b78eab0acdf8cf0fd208d450651317148add4215b00"
+    },
+    {
+      "file": "src/cocert/baselines/recent/density_bands/__init__.py",
+      "sha256": "7c955f40e220cd49ee217fc71117d62d7fc5b21a7c9eac00201675dc0f104cce"
+    },
+    {
+      "file": "src/cocert/baselines/recent/density_bands/model.py",
+      "sha256": "6f235ffaef3310a165d53fb4546e43e0a9fbe9f30f7391f7a1906d24a4f71036"
+    },
+    {
+      "file": "src/cocert/baselines/recent/eris_tv/__init__.py",
+      "sha256": "7c955f40e220cd49ee217fc71117d62d7fc5b21a7c9eac00201675dc0f104cce"
+    },
+    {
+      "file": "src/cocert/baselines/recent/eris_tv/model.py",
+      "sha256": "9413e62f3b3353eb6f481b80f0318803c874f19685abbd153fc5e00bed43a886"
+    },
+    {
+      "file": "src/cocert/baselines/recent/minimum_tv/__init__.py",
+      "sha256": "7c955f40e220cd49ee217fc71117d62d7fc5b21a7c9eac00201675dc0f104cce"
+    },
+    {
+      "file": "src/cocert/baselines/recent/minimum_tv/model.py",
+      "sha256": "9561c055e4ddad4739d4394b7aa6e59fba80a31854d477dd483da5155ab44bb4"
+    },
+    {
+      "file": "src/cocert/baselines/recent/mmd_miss/__init__.py",
+      "sha256": "7c955f40e220cd49ee217fc71117d62d7fc5b21a7c9eac00201675dc0f104cce"
+    },
+    {
+      "file": "src/cocert/baselines/recent/mmd_miss/median.py",
+      "sha256": "5fd029216337c015cf49497dd28964517473a03e65f49f32290f97164a1523c0"
+    },
+    {
+      "file": "src/cocert/baselines/recent/mmd_miss/model.py",
+      "sha256": "77a0a5e1ba8befc7fe6958408c60a939dd24f812a7d8f4388b78e9ef98f270fa"
+    },
+    {
+      "file": "src/cocert/baselines/recent/partial_id_tv/__init__.py",
+      "sha256": "7c955f40e220cd49ee217fc71117d62d7fc5b21a7c9eac00201675dc0f104cce"
+    },
+    {
+      "file": "src/cocert/baselines/recent/partial_id_tv/gurobi.py",
+      "sha256": "1f56577a9f34ea1596abc9cf266e6060efae7a83651d5661627d2f8a4387897e"
+    },
+    {
+      "file": "src/cocert/baselines/recent/partial_id_tv/interval_search.py",
+      "sha256": "49fd349a49888ca06366dde12b3b7b63a5a6fe5d77c343048e0c4a7409527d7f"
+    },
+    {
+      "file": "src/cocert/baselines/recent/partial_id_tv/model.py",
+      "sha256": "f5da1fc8ff06c57c2a37eb9ae8014811425c4423333475e3112a0f1778a5febf"
+    },
+    {
+      "file": "src/cocert/baselines/recent/tv_query_common.py",
+      "sha256": "88e57da021d53e266e8e56c71cdc6903c328a73934f90edf2b7d1c5efd1743f9"
+    },
+    {
       "file": "src/cocert/baselines/symbolic.py",
-      "sha256": "59608ad297d37e7284c9ad76b3c6491056a8ccbed823968e7317f6d377d2c1ee"
+      "sha256": "85186cb79eb7d48d34c62750e9641f7136c9e0e9df9c4cdc15f5404d3cd6710b"
     },
     {
       "file": "src/cocert/baselines/symbolic_isolation.py",
-      "sha256": "7c21c7848c41cd76d574e7560f5f3afceb4a965e3996ecf2fe303335e2c6c50c"
+      "sha256": "58b8217aabb6411ea378091fbfe720ed2ba6dba7ded356a02e8868fafca14765"
     },
     {
       "file": "src/cocert/cli.py",
@@ -178,12 +238,8 @@
       "sha256": "9d60139c001e42a43d217052a4d31cac265d0c1952f133e02e68642dadedccbd"
     },
     {
-      "file": "tests/test_audit_record.py",
-      "sha256": "27373a1b5b673d95ab66b8ef037f281a85d69d88a16e007d9857183fc88f9345"
-    },
-    {
       "file": "tests/test_contracts.py",
-      "sha256": "f3c23f84be6ad532c5462ec586115625c646bbd626823b7f1db4514419556a75"
+      "sha256": "6727b43c0089c1bc2e0753170ebba2d6c4530a146337b35145d6a08690747ea6"
     },
     {
       "file": "tests/test_integer_certificates.py",
@@ -191,15 +247,15 @@
     },
     {
       "file": "tests/test_optional_adapters.py",
-      "sha256": "b64068dca9d381ce79ea8df70627db44550583462294013eca99e9b28bd5bd76"
+      "sha256": "fac07a8f99e5e19859ad2cd5b6e467fc81add937589408e71e851aa098e21480"
     },
     {
       "file": "tests/test_packaging.py",
-      "sha256": "a51f3353096e4a3ff7741132fad56354173965bf0603bc7d6f2918c7b651fbf9"
+      "sha256": "98b0bea6a2805803f21f59d0a3cbe306582655a76ebc5fd9620387fadbc0353e"
     },
     {
       "file": "tests/test_pair_screen.py",
-      "sha256": "3529973b7a065f87043f9d79422a069e925770d6f060f654c9db84b1fa82104f"
+      "sha256": "e4ca77a903f9eb1f1c92cfdfc167abd45071fb65364a4b1cf36e7361bc935936"
     },
     {
       "file": "tests/test_paper_contracts.py",
@@ -211,11 +267,11 @@
     },
     {
       "file": "tests/test_policy_benchmark.py",
-      "sha256": "c29a2568bee5abe1017072dbddd008e5159634e212926f7afb9cd41b6061fa79"
+      "sha256": "5e742f39f41b489a318afb880665f5387be1c343b6090ead0868756b13df9a0e"
     },
     {
-      "file": "tests/test_table8_reproduction.py",
-      "sha256": "be118d772074e4465175106e02ecacbeba07118d63482ec1f030953418744ed6"
+      "file": "tests/test_recent_baselines.py",
+      "sha256": "d61e95cb92b5427a32fba9d7ce6cc59a5b1bb94ed0cde21a00e23ed7467d18af"
     }
   ]
 }

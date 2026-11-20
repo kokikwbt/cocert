@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "total_queries": 1615,
+  "cohorts": {
+    "unknown": 144,
+    "available": 96,
+    "strata": 1375
+  },
+  "checks": {
+    "unknown": {
+      "standard_library_only": true,
+      "isolated": true,
+      "raw_observations_read": false,
+      "certificate_replay_passed": true,
+      "queries": 144,
+      "statuses": {
+        "positive": 101,
+        "negative": 43
+      }
+    },
+    "available": {
+      "standard_library_only": true,
+      "isolated": true,
+      "raw_observations_read": false,
+      "certificate_replay_passed": true,
+      "queries": 96,
+      "statuses": {
+        "positive": 73,
+        "negative": 23
+      }
+    },
+    "strata": {
+      "standard_library_only": true,
+      "isolated": true,
+      "raw_observations_read": false,
+      "certificate_replay_passed": true,
+      "queries": 1375,
+      "statuses": {
+        "positive": 863,
+        "negative": 512
+      }
+    }
+  },
+  "strata": [
+    {
+      "stratum": "separate_positive",
+      "n": 452,
+      "generation_median_ms": 1.1045625433325768,
+      "replay_median_ms": 0.6409371271729469,
+      "replay_p95_ms": 11.220085108652711,
+      "certificate_median_bytes": 551.0,
+      "speedup_paired_median": 1.7148780348978598,
+      "ratio_of_medians": 1.7233555313055342,
+      "generation_mean_ms": 3.679629687252825,
+      "replay_mean_ms": 2.1899134946772745
+    },
+    {
+      "stratum": "shared_only_positive",
+      "n": 411,
+      "generation_median_ms": 3.0404170975089073,
+      "replay_median_ms": 0.8201655000448227,
+      "replay_p95_ms": 14.641104266047478,
+      "certificate_median_bytes": 1285,
+      "speedup_paired_median": 2.813373083812092,
+      "ratio_of_medians": 3.707077531721032,
+      "generation_mean_ms": 8.974136347336346,
+      "replay_mean_ms": 3.7748424966259884
+    },
+    {
+      "stratum": "common_negative",
+      "n": 512,
+      "generation_median_ms": 0.8763750083744526,
+      "replay_median_ms": 0.6552920676767826,
+      "replay_p95_ms": 12.120173359289765,
+      "certificate_median_bytes": 354.0,
+      "speedup_paired_median": 1.3203008247811936,
+      "ratio_of_medians": 1.337380767451495,
+      "generation_mean_ms": 3.1601380305801285,
+      "replay_mean_ms": 1.9901556934200926
+    }
+  ],
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "clarabel": "0.11.1"
+  },
+  "counts_stored_separately": true,
+  "all_answers_match_frozen_reference": true,
+  "aggregate": "Unweighted statistics within the existing fixed answer-stratified sample; not population estimates"
+}

@@ -1,9 +1,0 @@
-{
-  "status": "passed",
-  "calls": 63027,
-  "checked": 63027,
-  "undecided": 0,
-  "unique_proofs": 11413,
-  "same_model_answers": true,
-  "standard_library_only": true
-}

@@ -36,7 +36,8 @@ def ranked_pairs(gamma, limit=5):
 
 
 def threshold(
-    before, boundary, after, epsilon=0.1, solver="socp", max_iterations=8, pair_scales=5
+    before, boundary, after, epsilon=0.1, solver="socp", max_iterations=8, pair_scales=5,
+    conic_candidate=None,
 ):
     """Propose an Algorithm 1 decision; exact recovery/checking is separate."""
     started = time.perf_counter()
@@ -151,7 +152,10 @@ def threshold(
                 )
     # Send unresolved queries to the selected solver.
     if solver == "socp":
-        r = full.threshold_residual(A, B, C, epsilon=epsilon)
+        if conic_candidate is None:
+            r = full.threshold_residual(A, B, C, epsilon=epsilon)
+        else:
+            r = conic_candidate(A, B, C, epsilon=epsilon, scores=gamma)
     elif solver == "facets":
         from ._facets import threshold_residual
 

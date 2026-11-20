@@ -1,0 +1,370 @@
+{
+  "schema": 1,
+  "epsilon": "1/10",
+  "scenarios": [
+    {
+      "scenario": "CARE",
+      "patterns": [
+        {
+          "fine_positive": false,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 60
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 10
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 6
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 4
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 12
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": true,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 4639
+        }
+      ],
+      "both_required_distinct_inputs": 0,
+      "both_required_units": 0
+    },
+    {
+      "scenario": "HydSys-PS6",
+      "patterns": [
+        {
+          "fine_positive": false,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 1116
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 196
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 4
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 28
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 37
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 24
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": true,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 131
+        }
+      ],
+      "both_required_distinct_inputs": 4,
+      "both_required_units": 4
+    },
+    {
+      "scenario": "MetroPT2",
+      "patterns": [
+        {
+          "fine_positive": false,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 61
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 169
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 11
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 228
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 70
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 368
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": true,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 2810
+        }
+      ],
+      "both_required_distinct_inputs": 11,
+      "both_required_units": 1
+    },
+    {
+      "scenario": "OYICD-FS",
+      "patterns": [
+        {
+          "fine_positive": false,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 23
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 74
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 27
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 75
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 52
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 136
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": true,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 1149
+        }
+      ],
+      "both_required_distinct_inputs": 27,
+      "both_required_units": 9
+    },
+    {
+      "scenario": "OYICD-LE",
+      "patterns": [
+        {
+          "fine_positive": false,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 140
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 1038
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 13
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 108
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 58
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 52
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": true,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 127
+        }
+      ],
+      "both_required_distinct_inputs": 13,
+      "both_required_units": 12
+    },
+    {
+      "scenario": "XJTU-SY",
+      "patterns": [
+        {
+          "fine_positive": false,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 827
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": false,
+          "shared_known": false,
+          "queries": 18
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": false,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 31
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": false,
+          "shared_known": true,
+          "queries": 5
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": false,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 9
+        },
+        {
+          "fine_positive": true,
+          "separate_unknown": true,
+          "shared_unknown": true,
+          "separate_known": true,
+          "shared_known": true,
+          "queries": 996
+        }
+      ],
+      "both_required_distinct_inputs": 0,
+      "both_required_units": 0
+    }
+  ],
+  "replayed_distinct_inputs": 55,
+  "compatible_distinct_inputs": 1504
+}

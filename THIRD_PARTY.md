@@ -2,7 +2,7 @@
 
 ## Bundled derived data
 
-The six records in `examples/real-small.jsonl` and their proofs are derived from the following datasets. The source data were transformed into cumulative histograms and differenced into retained cores A/C and a boundary histogram B. Fine observations and allocations are not included. Selection and identifiers are recorded in `examples/real-small-provenance.json`.
+The five records in `examples/real-small.jsonl` and their proofs are derived from the following datasets. The source data were transformed into cumulative histograms and differenced into retained cores A/C and a boundary histogram B. Fine observations and allocations are not included. Selection and identifiers are recorded in `examples/real-small-provenance.json`.
 
 - **ALARM LOGS IN PACKAGING INDUSTRY (ALPI), version 1**, Davide Dalle Pezze, Diego Tosato, Chiara Masiero, Gian Antonio Susto, and Alessandro Beghi (2021). [Provider](https://data.mendeley.com/datasets/4nhx2x67cd/1). [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - **Condition Monitoring of Hydraulic Systems**, Nikolai Helwig, Eliseo Pignanelli, and Andreas Schütze (2015), UCI Machine Learning Repository. [Provider](https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems). [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
@@ -10,7 +10,7 @@ The six records in `examples/real-small.jsonl` and their proofs are derived from
 
 These dataset licenses apply to the bundled derived examples independently of the implementation license.
 
-`examples/audit-record/` additionally contains retained cumulative motor-current checkpoints derived from MetroPT2 V2 under the same CC BY 4.0 terms. The request, supplied split count, and certificate describe a constructed 15-minute archive for retrospective investigation; the provider timestamps are preserved. No fine observations are included. `scripts/verify_audit_record.py` reconstructs the query and checks the rational TV bound.
+`evaluation/vldb/evidence/wmcs-audit.json` contains eight retained counter snapshots from [Wikimedia Cloud VPS managed monitoring](https://wikitech.wikimedia.org/wiki/Help:Cloud_VPS_managed_monitoring). The record identifies the source metric, intervals, and bin boundaries used to construct the audit query.
 
 ## Independent mathematical adapters
 

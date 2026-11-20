@@ -1,9 +1,0 @@
-{
-  "query_time": "2022-07-11T10:05:18.948",
-  "feature": "Motor_current",
-  "statement": "Every allocation compatible with the retained checkpoints and the supplied split count forces TV above 0.1 in at least one requested window pair. The affected pair may depend on the allocation. This is a finite-record contrast, with a verified known-total TV lower bound of 3933750285313/37431865351650.",
-  "display_TV_lower_bound": "21/200",
-  "source_url": "https://zenodo.org/records/7766691",
-  "construction": "fixed 15-minute checkpoint audit",
-  "uses_transformed_Gamma": false
-}

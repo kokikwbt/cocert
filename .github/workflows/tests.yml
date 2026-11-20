@@ -22,15 +22,14 @@ jobs:
       - name: Install the locked environment
         run: |
           python -m pip install uv==0.12.1
-          uv sync --frozen --all-extras
+          uv sync --frozen --extra all --extra test
       - name: Check the code and proof contracts
-        run: uv run --frozen --all-extras python -m pytest -q
+        run: uv run --frozen --extra all --extra test python -m pytest -q
       - name: Replay independent examples
         run: |
           python -I -S scripts/verify_offline.py examples/toy.jsonl examples/toy-proofs.jsonl
           python -I -S scripts/verify_offline.py examples/real-small.jsonl examples/real-small-proofs.jsonl
           python -I -S scripts/verify_archive_example.py
-          python -I -S scripts/verify_audit_record.py examples/audit-record
-          python -I -S scripts/reproduce_table8.py
+          python -I -S evaluation/vldb/evidence/reproduce.py --checker .
       - name: Check the source archive
         run: python scripts/package_release.py

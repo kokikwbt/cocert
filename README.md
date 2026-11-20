@@ -1,98 +1,48 @@
 # CoCert
 
-**Certified empirical change queries over retained histogram archives.**
+CoCert certifies empirical distribution contrasts from retained cumulative histograms. It requires one shared allocation of the unknown boundary counts across the requested windows and returns rational certificates that can be checked without a solver.
 
-CoCert determines what distribution changes can be certified after individual observations have been discarded. It uses one common allocation of the unknown boundary counts across all requested windows. Numerical solvers propose answers; exact rational certificates determine which answers can be returned.
+## Replay the paper results
 
-The processor reads retained histograms without changing their collection or storage format. It supports unknown and explicitly known split totals, exact proof checking, and six certification strategies for matched comparisons.
-
-## Quick start
-
-Use Python 3.11 and [uv](https://docs.astral.sh/uv/):
+From this checkout, run the following with Python 3.9 or later.
 
 ```sh
-git clone https://github.com/kokikwbt/cocert.git
-cd cocert
+python3 -I -S evaluation/vldb/evidence/reproduce.py --checker . --output runs/review-results.json
+```
+
+The command reaggregates the saved certification, verification, and timing records. It also reconstructs the native WMCS query from retained checkpoints and checks its certificate using exact arithmetic. [Evaluation guide](evaluation/vldb/README.md)
+
+A successful run prints:
+
+```text
+WMCS certificate replayed.
+Paper result records checked.
+```
+
+## Solve and verify a query
+
+Install Python 3.11 and [uv](https://docs.astral.sh/uv/), then run:
+
+```sh
 uv sync --frozen
 uv run --frozen cocert solve examples/sharing-gap.jsonl --output runs/sharing.jsonl
 uv run --frozen cocert verify examples/sharing-gap.jsonl runs/sharing.jsonl
 uv run --frozen cocert compare examples/sharing-gap.jsonl --output runs/comparison.jsonl
 ```
 
-The sharing example has an exact separate-window bound of zero, but CoCert certifies a change at TV 0.1. Each run saves its inputs' hashes, proofs, configuration, and environment information. Use a new output path for each run.
+On this example, each window admits zero contrast independently, while every shared allocation exceeds TV 0.1 in at least one window. Use a new output path for each solve. [Query and certificate formats](docs/FORMATS.md)
 
-With pip, install the numerical interface using `python -m pip install .`. Direct dependencies are pinned in [pyproject.toml](pyproject.toml); [uv.lock](uv.lock) also pins transitive dependencies.
+## Get the datasets
 
-## Python interface
+The seven maintenance datasets use the external PdMData downloader in a separate Python environment. The data guide lists the commands, dataset IDs, and inputs required for a full rerun. [Data acquisition](docs/DATA.md#download-the-source-data)
 
-```python
-from cocert import Engine, verify
+## Review the implementation
 
-request = {
-    "query_id": "sharing-gap",
-    "A": [[1, 0], [1, 2]],
-    "B": [1, 1],
-    "C": [[0, 1], [2, 1]],
-}
-answer = Engine().query(request, epsilon="1/10")
-assert answer["status"] == "positive"
-assert verify(answer["proof"], request, epsilon="1/10")
-```
-
-`A` and `C` contain the known left and right cores for each window. `B` contains the shared boundary histogram. A positive answer certifies that every compatible allocation exceeds the threshold in at least one requested window. A negative answer provides one allocation keeping every contrast at most the threshold. `undecided` means that no certificate was recovered.
-
-Supply a known split total through the separate `total` argument. For the CLI, use `--totals` with an explicit totals file. Labels and hidden totals in a query cannot supply this information. See [input and proof formats](docs/FORMATS.md).
-
-## Verify without installing a solver
+The paper guide maps the shared solver, screening, and verification steps to source files. Optional dependencies enable the archive adapter and comparison engines. [Paper guide](docs/PAPER_GUIDE.md) · [Dependencies](docs/DEPENDENCIES.md)
 
 ```sh
-python -I -S scripts/verify_offline.py examples/toy.jsonl examples/toy-proofs.jsonl
-python -I -S scripts/verify_offline.py examples/real-small.jsonl examples/real-small-proofs.jsonl
-python -I -S scripts/verify_archive_example.py
-python -I -S scripts/verify_audit_record.py examples/audit-record
-python -I -S scripts/reproduce_table8.py
+uv sync --frozen --extra all --extra test
+uv run --frozen --extra all --extra test python -m pytest -q
 ```
 
-These commands use only the Python standard library. The audit example reconstructs a query from retained checkpoints and checks an exact TV lower bound above 0.1050 at threshold 0.1. The Table 8 command reconstructs the published aggregate rows from saved timing repetitions and exact sampling weights; it does not measure new runtimes. Run the checkers without Python's `-O` option.
-
-## Repository layout
-
-| Location | Contents |
-| --- | --- |
-| `src/cocert/` | Query API, screening, exact certificates, integer queries, and calibrated thresholds |
-| `src/cocert/backends/` | Sparse SOCP and fixed-total LP solvers |
-| `src/cocert/baselines/` | Matched coverage and symbolic comparisons |
-| `scripts/` | Verification, archive conversion, benchmarking, and source packaging |
-| `tests/` | Mathematical, input, proof, and packaging contracts |
-| `examples/` | Small constructed and attributed measured-data examples |
-| `expected/` | Reference answers, frozen selections, and saved experiment summaries |
-| `docs/` | Formats, dependencies, algorithm mapping, and reproduction scope |
-
-Read [the paper guide](docs/PAPER_GUIDE.md) to follow the algorithm from query validation to exact verification. [execution-policy.json](execution-policy.json) fixes the default screening order, pair budget, and solver fallback. `Engine(pair_scales=0)` selects the no-pair ablation.
-
-## Optional components
-
-```sh
-uv sync --frozen --all-extras
-uv run --frozen --all-extras python -m pytest -q
-uv run --frozen --all-extras python scripts/integer_query.py examples/integer-gap.jsonl
-uv run --frozen --all-extras cocert benchmark examples/toy.jsonl --output runs/timing.jsonl
-```
-
-The `archive` extra enables retained Parquet inputs, `symbolic` enables Z3, and `test` installs pytest. See [dependencies](docs/DEPENDENCIES.md), [integer semantics](docs/INTEGER_DOMAIN.md), and [sampling contracts](docs/SAMPLING.md). Sampling interpretations require the stated independence or known-block contract.
-
-## Reproducing the paper
-
-The repository includes the numerical implementation, small measured-data examples, exact proofs, and saved summaries. [Reproduction scope](docs/REPRODUCIBILITY.md) distinguishes executable checks from saved-result replay. [Data inventory](docs/DATA.md) identifies the full input, reference, and archive packs needed for dataset-level experiments. Full raw-data preparation and figure generation are not bundled.
-
-The source archive is built with:
-
-```sh
-python scripts/package_release.py
-```
-
-This creates `build/cocert-source.zip` and its SHA256 file from the documented file inventory. Local environments, raw datasets, caches, and run outputs are excluded. See [CONTRIBUTING.md](CONTRIBUTING.md) for code changes and source-hash updates.
-
-## License and citation
-
-The implementation and documentation use the [MIT License](LICENSE). Derived examples retain the dataset terms listed in [THIRD_PARTY.md](THIRD_PARTY.md). Citation metadata is provided in [CITATION.cff](CITATION.cff).
+The source uses the MIT License. Bundled derived examples retain their provider terms. [License](LICENSE) · [Data attribution](THIRD_PARTY.md)

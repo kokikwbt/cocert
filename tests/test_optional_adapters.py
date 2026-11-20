@@ -28,3 +28,29 @@ def test_midpoint_is_a_descriptive_contrast():
     assert midpoint_tv(q) == Fraction(0)
     q = dict(A=[[10, 0]], B=[0, 0], C=[[0, 10]])
     assert midpoint_tv(q) == Fraction(1)
+
+
+def test_symbolic_window_tolerances():
+    pytest.importorskip("z3")
+    from cocert.baselines.symbolic import decide
+
+    q = dict(A=[[1, 0], [1, 2]], B=[1, 1], C=[[0, 1], [2, 1]])
+    assert decide(q, ["0", "1"])["status"] == "negative"
+    assert decide(q, ["0", "0"])["status"] == "positive"
+    assert decide(q, ["0", "1"], total=1)["rational_model_verified"]
+
+
+def test_symbolic_integer_history():
+    pytest.importorskip("z3")
+    from cocert.baselines.symbolic import decide
+    from cocert.baselines.symbolic_isolation import IsolatedSMT
+
+    q = dict(A=[[5, 4], [5, 6]], B=[1, 1], C=[[4, 5], [6, 5]])
+    assert decide(q, "1/10")["status"] == "negative"
+    assert decide(q, "1/10", domain="integer")["status"] == "positive"
+    worker = IsolatedSMT()
+    try:
+        assert worker.decide(q, ["1/10", "1/10"], domain="integer",
+                             timeout_ms=2000)["status"] == "positive"
+    finally:
+        worker.close()

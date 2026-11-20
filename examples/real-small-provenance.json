@@ -39,12 +39,6 @@
     },
     {
       "dataset": "hydsys",
-      "query_id": 8535,
-      "unit": "1567",
-      "feature": "EPS1"
-    },
-    {
-      "dataset": "hydsys",
       "query_id": 10002,
       "unit": "1702",
       "feature": "PS6"

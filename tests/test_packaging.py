@@ -24,7 +24,8 @@ def test_packaged_code_has_an_explicit_paper_mapping():
     names = {str(path.relative_to(ROOT)) for path in files}
     assert "src/cocert/api.py" in names and "docs/PAPER_GUIDE.md" in names
     assert not any("outputs/" in name or "data/local/" in name for name in names)
-    assert {"LICENSE", "CITATION.cff", ".github/workflows/tests.yml"} <= names
+    assert {"LICENSE", ".github/workflows/tests.yml"} <= names
+    assert "evaluation/vldb/evidence/records.json.gz" in names
     packaging_module().check_sources(ROOT)
 
 
@@ -72,10 +73,21 @@ def test_personal_paths_are_rejected():
         packaging_module().check_public_text("README.md", "/" + "home/example/code.py")
 
 
-def test_public_author_metadata_is_allowed():
-    packaging_module().check_project_metadata(ROOT)
-    packaging_module().check_public_text("CITATION.cff", "Koki Kawabata")
-    packaging_module().check_public_text("pyproject.toml", "koki@sanken.osaka-u.ac.jp")
+def test_package_omits_review_extras():
+    module = packaging_module()
+    module.check_project_metadata(ROOT)
+    names = {str(path.relative_to(ROOT)) for path in module.included_files(ROOT)}
+    assert {"CITATION.cff", "CONTRIBUTING.md"}.isdisjoint(names)
+    assert not any(name.startswith("expected/reviewer-diagnostics/") for name in names)
+
+
+@pytest.mark.parametrize(
+    "content",
+    ("researcher" + "@" + "example.org", "experiments/" + "E012-internal/record.json"),
+)
+def test_contact_data_and_internal_paths_are_rejected(content):
+    with pytest.raises(ValueError, match="Contact address|Internal research path"):
+        packaging_module().check_public_text("README.md", content)
 
 
 def test_non_english_repository_text_is_rejected():
