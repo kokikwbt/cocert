@@ -144,6 +144,32 @@ def test_cli_comparisons_match_expected(fixture, tmp_path):
     )
 
 
+def test_cli_reports_malformed_json_with_its_line(tmp_path):
+    bad_input = tmp_path / "queries.jsonl"
+    bad_input.write_text('{"query_id": "valid"}\n{invalid}\n')
+    call = subprocess.run(
+        [sys.executable, "-m", "cocert.cli", "verify", str(bad_input), "unused.jsonl"],
+        capture_output=True,
+        text=True,
+    )
+    assert call.returncode == 2
+    assert f"{bad_input}:2:2:" in call.stderr
+
+
+def test_cli_rejects_a_saved_proof_under_a_different_threshold():
+    call = subprocess.run(
+        [
+            sys.executable, "-m", "cocert.cli", "verify",
+            str(ROOT / "examples/toy.jsonl"), str(ROOT / "examples/toy-proofs.jsonl"),
+            "--epsilon", "3/10",
+        ],
+        capture_output=True,
+        text=True,
+    )
+    assert call.returncode == 2
+    assert "Proof/threshold mismatch" in call.stderr
+
+
 def test_offline_verifier_works_without_site_packages():
     unknown = subprocess.run(
         [

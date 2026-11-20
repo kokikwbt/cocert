@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cocert"
-version = "0.1.0"
+version = "0.1.1"
 description = "Verified multiscale change queries over cumulative histograms"
 readme = "README.md"
 license = "MIT"

@@ -10,7 +10,7 @@ The `(dataset, query_id)` pair must be unique within an input file. Fine referen
 
 ## Known-total condition
 
-Pass `--totals` with a separate JSONL file containing the same ID pairs and a `total` rational value per query. This adds sum(x)=total. Totals must come from an explicitly supplied external observation or an identified evaluation condition; they are never inferred from elapsed time. Omit the file for the unknown-total condition. Epsilon defaults to `1/10`; use `--epsilon 3/10` or `--epsilon 1/2` for the other reported thresholds.
+Pass `--totals` with a separate JSONL file containing the same ID pairs and a `total` rational value per query. This adds sum(x)=total. Totals must come from an explicitly supplied external observation or an identified evaluation condition; they are never inferred from elapsed time. Omit the file for the unknown-total condition. The default tolerance is `1/10`. The paper also evaluates `--epsilon 1/100` and `--epsilon 3/10`. For verification, pass the same tolerance and totals file used to solve the query.
 
 ## Solver output
 
@@ -28,7 +28,7 @@ With the archive extra installed:
 uv run --frozen --extra archive python scripts/construct_queries.py archive.parquet metadata.json requests.jsonl --output runs/constructed.jsonl.gz
 ```
 
-The Parquet schema is `series_id`, `point_id`, `clock`, `b0`, ..., `b(M-1)`; the b columns contain cumulative, temporally nondecreasing bin counts. Metadata maps string series IDs to objects with `bins`. Series with fewer bins may have unused columns; only their declared bin columns are read. Point IDs and clocks must strictly increase within each series.
+The Parquet schema is `series_id`, `point_id`, `clock`, `b0`, ..., `b(M-1)`; the b columns contain cumulative, temporally nondecreasing bin counts. Each `series_id` is an integer key. Metadata maps its string representation to an object with `bins`. Series with fewer bins may have unused columns; only their declared bin columns are read. Point IDs and clocks must strictly increase within each series.
 
 A request has `request_id`, `series_id`, `dataset`, `unit`, `feature`, `cut_clock`, and `outer_ids` (K pairs of retained point IDs). The cut must lie strictly between retained points, and every window must enclose both points. Endpoint counts are converted to exact fractions before subtraction. The conversion script emits unknown-total queries. The numerical API accepts explicit totals independently; it does not need access to the Parquet archive or original stream.
 

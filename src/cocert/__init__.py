@@ -1,6 +1,6 @@
 """CoCert. The exact verifier can be imported without numerical dependencies."""
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 
 def __getattr__(name):

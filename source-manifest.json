@@ -39,7 +39,7 @@
     },
     {
       "file": "src/cocert/__init__.py",
-      "sha256": "44ef1871c87bb7f8d4928e278b3dd11c9ee5ad17b0efbc21f1fe861918a046c2"
+      "sha256": "1c2499748ab36736c3a591114f24106c61a5ca23e3296377c36573138f4f0567"
     },
     {
       "file": "src/cocert/_certificate.py",
@@ -191,7 +191,7 @@
     },
     {
       "file": "src/cocert/cli.py",
-      "sha256": "8ec1e96311c6c6d2f06d3126c29ca0055a0e46c0271178ee148851519e940390"
+      "sha256": "ba96d5a84c090aa7c2fbef4529bfed7fcfbc49ff7aa3a6df631b7fe30a9e8db3"
     },
     {
       "file": "src/cocert/comparison.py",
@@ -207,7 +207,7 @@
     },
     {
       "file": "src/cocert/io.py",
-      "sha256": "db429b8cbd0c30cd1962af1a6f0e7ae821ad496f650eee61b1576ff698a37505"
+      "sha256": "3566bd40ea201872e88fce7d0012a4fbfa600e9742bfced943bcb6187078b713"
     },
     {
       "file": "src/cocert/paired_calibration.py",
@@ -239,7 +239,7 @@
     },
     {
       "file": "tests/test_contracts.py",
-      "sha256": "6727b43c0089c1bc2e0753170ebba2d6c4530a146337b35145d6a08690747ea6"
+      "sha256": "ff01b33b02bbee3e4424a1d4421c03b628618aa1a0ae34494fe34b9d0c7812ca"
     },
     {
       "file": "tests/test_integer_certificates.py",
@@ -251,7 +251,7 @@
     },
     {
       "file": "tests/test_packaging.py",
-      "sha256": "98b0bea6a2805803f21f59d0a3cbe306582655a76ebc5fd9620387fadbc0353e"
+      "sha256": "0539c1aef30bcf644667b08a1571508e94cc57b27c81321e25847c5d31172d94"
     },
     {
       "file": "tests/test_pair_screen.py",

@@ -1,6 +1,6 @@
 # Data inventory
 
-The package contains synthetic examples and six derived queries with exact proofs: two from ALPI, three from HydSys, and one from MetroPT2. Their attribution and transformations are recorded in [THIRD_PARTY.md](../THIRD_PARTY.md) and `examples/real-small-provenance.json`. The [VLDB evaluation directory](../evaluation/vldb/) also provides saved outcomes and the retained snapshots for one native WMCS audit.
+The package contains synthetic examples and five derived queries with exact proofs, including two from ALPI, two from HydSys, and one from MetroPT2. Their attribution and transformations are recorded in [THIRD_PARTY.md](../THIRD_PARTY.md) and `examples/real-small-provenance.json`. The [VLDB evaluation directory](../evaluation/vldb/) also provides saved outcomes and the retained snapshots for one native WMCS audit.
 
 ## Download the source data
 
@@ -38,7 +38,7 @@ The WMCS experiments use retained snapshots collected through the Prometheus API
 | wmcs | [Wikimedia Cloud VPS monitoring](https://wikitech.wikimedia.org/wiki/Help:Cloud_VPS_managed_monitoring) | — | 34,564 |
 | Total | Eight datasets, nine scenarios | — | 66,952 |
 
-`../expected/main-input-inventory.json` records the count-only workload and its digest. For the provenance of the bundled derived examples, see [data attribution](../THIRD_PARTY.md).
+The [count-only input inventory](../expected/main-input-inventory.json) records the workload and its digest. For the provenance of the bundled derived examples, see [data attribution](../THIRD_PARTY.md).
 
 Scania and WMCS provide native retained histogram summaries. The other six datasets supply finer real observations from which retained cumulative archives are constructed. OYICD-LE and OYICD-FS are separate signal scenarios within OYICD. This distinction is preserved by separating count-only replay from archive reconstruction and raw-data acquisition.
 

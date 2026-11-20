@@ -10,9 +10,18 @@ def rows(path):
     path = Path(path)
     opener = gzip.open if path.suffix == ".gz" else open
     with opener(path, "rt", encoding="utf-8") as stream:
-        for line in stream:
-            if line.strip():
-                yield json.loads(line)
+        for number, line in enumerate(stream, start=1):
+            if not line.strip():
+                continue
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError as error:
+                raise ValueError(
+                    f"{path}:{number}:{error.colno}: {error.msg}"
+                ) from error
+            if not isinstance(record, dict):
+                raise ValueError(f"{path}:{number}: Expected a JSON object")
+            yield record
 
 
 def key(q):
